@@ -1,5 +1,25 @@
 .out
+  padding-top: $header-height
+
+  +lg
+    padding-top: $header-height-lg
+
   &__header
+    position: fixed
+    z-index: 10
+    left: 0
+    right: 0
+    top: 0
+
+    height: $header-height
+
+    +lg
+      height: $header-height-lg
+
   &__main
+    
   &__footer
+
+  &--has-transp-header
+    padding-top: 0
     

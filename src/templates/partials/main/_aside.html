@@ -1,0 +1,20 @@
+<!-- begin aside -->
+<aside class="main-page__aside main-aside">
+  <h1 class="main-aside__title">Що вас цікавить?</h1>
+
+  {{ mixins.list(
+    name = 'nav',
+    nameAsClass = false,
+    hasWrap = true,
+    modifications = { wrap: 'main-nav js-animated-nav', list: 'main-nav__list', item: 'main-nav__item', link: 'main-nav__link' },
+    list = [
+      { link: 'Автопілот', modLink: 'main-nav__link--active' },
+      { link: 'RTK-сигнал' },
+      { link: 'Модернізація сівалок' },
+      { link: 'Б/у агронавігатори' },
+      { link: 'Агронавігатор' },
+      { link: 'Аудит техніки' }
+    ]
+  ) }}
+</aside>
+<!-- end aside -->

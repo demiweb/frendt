@@ -1,0 +1,65 @@
+{%set
+menu = [
+  {
+    img: '23184.jpg',
+    title: 'Про компанію'
+  },
+  {
+    img: '23184.jpg',
+    title: 'Продукти'
+  },
+  {
+    img: '8169.jpg',
+    title: 'Точне землеробство'
+  },
+  {
+    img: '412611-PD51HB-765.jpg',
+    title: 'Сервіс'
+  },
+  {
+    img: '4584.jpg',
+    title: 'Новини'
+  },
+  {
+    img: '196870-OYDU9R-910.jpg',
+    title: 'Контакти'
+  },
+  {
+    img: '1162.jpg',
+    title: 'Сезонні знижки'
+  },
+  {
+    img: '3196.jpg',
+    title: 'Написати нам'
+  }
+]
+%}
+
+<!-- begin menu -->
+<nav
+  class="header__menu menu js-menu"
+  data-block="header__menu"
+  data-menu="main">
+  <button
+    type="button"
+    aria-label="Close menu"
+    class="menu__close js-menu-close"
+  >
+    Закрити
+    {{ mixins.icon('close') }}
+  </button>
+
+  <ul class="menu__list">
+    {% for i in menu %}
+    <li class="menu__item js-lazy" data-background-image="./img/menu/{{ i.img }}">
+      <a href="#">
+        <span>
+          {{ i.title }}
+          {{ mixins.icon('right-arrow') }}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+<!-- end menu -->

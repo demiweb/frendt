@@ -1,0 +1,58 @@
+<!-- begin main-page -->
+<section class="main-page">
+  <div class="main-page__inner">
+    {% include "partials/main/_aside.html" %}
+
+    <div class="main-page__content">
+
+      <!-- begin main-slider -->
+      <div class="main-slider__wrap js-slider-wrap">
+        <div class="main-slider__pagination-wrap">
+          <div class="main-slider__pagination js-slider-pagination"></div>
+          <div class="main-slider__scroll-down scroll-down">
+            <img
+              class="js-lazy"
+              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              alt=""
+              data-src="./img/mouse.png"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-container js-slider" data-slider="main">
+          <div class="swiper-wrapper">
+            {% for i in range(0, 6) %}
+            <a href="#" class="swiper-slide main-slide">
+              <span class="main-slide__bg">
+                <video
+                  class="js-lazy"
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  data-src="./video/video-bg.mp4"
+                  muted
+                  loop
+                  autoplay
+                  playsinline
+                ></video>
+              </span>
+
+              <span class="main-slide__nmb">0{{ i + 1 }}</span>
+
+              <span class="main-slide__content">
+                <span class="main-slide__icon"></span>
+
+                <span class="main-slide__title">Перед основним грунтообробітком</span>
+
+                <span class="main-slide__text">Після збирання культур ми обробляємо восени землю дисковими боронами в один 
+                  бік, щоб розбити пожнивні рештки посівів. Тоді вносимо на продисковану стерню 
+                біодеструктор. Для цього застосовуємо препарат «екостерн» від «БТУ-центр».</span>
+              </span>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- end main-slider -->
+    </div>
+  </div>
+</section>
+<!-- end main-page -->

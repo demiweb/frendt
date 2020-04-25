@@ -4,11 +4,14 @@ import loadPolyfills from './polyfills/loadPolyfills'
 import classNames from './classNames'
 import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
+import animateNav from './methods/animateNav'
+import closeMenu from './methods/closeMenu'
 
 import Menu from './components/Menu/Menu'
+import Slider from './components/Slider/Slider'
 
 import { NO_SCROLL } from './constants'
-import { isModernBrowser } from './helpers'
+import { isModernBrowser, setVhProperty } from './helpers'
 
 class App {
   constructor() {
@@ -27,6 +30,8 @@ class App {
         menu: 'header__nav',
       },
     })
+
+    this.slider = new Slider(`.${classNames.slider.container}`)
   }
 
   updateState(state) {
@@ -40,6 +45,9 @@ class App {
     this.methods = {
       setHTMLClassNames,
       setLazy,
+      setVhProperty,
+      animateNav,
+      closeMenu,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -49,6 +57,7 @@ class App {
     this.initMethods()
 
     this.menu.init()
+    this.slider.init()
   }
 
   preventScroll() {
@@ -60,6 +69,7 @@ class App {
   }
 
   toggleScroll(condition) {
+    // eslint-disable-next-line
     condition ? this.preventScroll() : this.allowScroll()
   }
 }

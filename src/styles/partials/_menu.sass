@@ -1,0 +1,92 @@
+.menu
+  color: $white 
+
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+
+    height: 100%
+    width: 100%
+
+    position: relative
+    z-index: 1
+    
+    text-transform: uppercase  
+    font-size: em(24)
+    font-weight: 700
+
+    padding: rem(15)
+
+    +md
+      font-size: em(21)
+
+    +sm
+      font-size: 1em
+
+    .icon
+      font-size: rem(15)
+      width: 0
+      +tr(width .3s)
+
+    span
+      position: relative
+      z-index: 1
+
+    +before
+      +coverdiv
+      background-color: $accent
+      z-index: 0
+
+      +hidden
+      +ready
+        +tr(opacity .3s, visibility .3s)
+
+    +hover-focus
+      text-decoration: underline
+      .icon
+        width: 1em
+      +before
+        +visible
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    +cover
+    width: 25%
+    height: 50vh
+    height: calc((var(--vh, 1vh) * 50))
+
+    +lg
+      width: 50%
+      height: 25vh
+      height: calc((var(--vh, 1vh) * 25))
+
+    +before
+      +coverdiv
+      z-index: 0
+      background-color: rgba($black, .15)
+
+  &__close
+    display: flex
+    align-items: center
+
+    position: absolute
+    z-index: 3
+    top: rem(15)
+    right: rem(15)
+
+    font-size: em(14)
+
+    +tr(color .3s)
+
+    .icon
+      margin-left: .5em
+
+    +hover-focus
+      color: $accent
+
+

@@ -1,5 +1,47 @@
+{% if header.popup %}
 <!-- begin header -->
-<header class="out__header header">
-  hello from header
+<header class="out__header header{% if header.mod %} {{ header.mod }}{% endif %}">
+  <div class="header__inner">
+    <a href="/" class="header__logo logo">
+      <img
+        class="js-lazy"
+        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        alt=""
+        data-src="./img/logo.svg"
+      />
+    </a>
+
+    <button
+      type="button"
+      aria-label="Toggle menu"
+      class="header__burger burger js-burger"
+      data-menu-target="main"
+    ><span></span></button>
+
+    {% include "partials/main/_menu.html" %}
+
+    <div class="lang header__lang">
+      <div class="lang__item lang__item--current">
+        <img
+          class="js-lazy"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt=""
+          data-src="./img/Flag_of_Ukraine.svg"
+        />
+      </div>
+
+      <ul class="lang__panel">
+        <li class="lang__item"><a href="#" class="lang__link">
+          <img
+            class="js-lazy"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt=""
+            data-src="./img/Flag_of_Russia.svg"
+          />
+        </a></li>
+      </ul>
+    </div>
+  </div>
 </header>
 <!-- end header -->
+{% endif %}

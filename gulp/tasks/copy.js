@@ -28,7 +28,7 @@ const build = gulp =>
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:data',
-    // 'copy:video',
+    'copy:video',
     'copy:fonts',
   )
 const watch = gulp => () => gulp.watch(`${src.img}/*`, gulp.parallel('copy:img'))

@@ -20,4 +20,11 @@ body
   $this: &
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
+
+.logo
+  display: inline-block
+  font-size: 0
+  +tr(opacity .3s)
+  &:focus
+    opacity: .7
     

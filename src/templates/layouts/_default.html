@@ -18,8 +18,11 @@
       <main class="out__main main{% if mainClass %} {{ mainClass }}{% endif %}">
         {% block content %}{% endblock %}
       </main>
-      <!-- end main -->      
-      {% include "partials/_footer.html" %}
+      <!-- end main -->
+
+      {% if not footer.hidden %}
+        {% include "partials/_footer.html" %}
+      {% endif %}
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
