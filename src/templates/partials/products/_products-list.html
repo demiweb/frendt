@@ -1,0 +1,70 @@
+<div class="section__filters section-filters">
+  <div class="section-filters__select">
+    {{ mixins.input(
+      name = 'select',
+      mod = 'input--row',
+      type = '',
+      placeholder = '',
+      value = '',
+      fieldClass = 'js-select',
+      label = { first: '<label class="input__label">Сортувати:</label>' },
+      options = [
+        { value: '1', option: 'За зростанням ціни' },
+        { value: '2', option: 'За зростанням ціни-1' },
+        { value: '3', option: 'За зростанням ціни-2' },
+        { value: '4', option: 'За зростанням ціни-3' }
+      ]
+    ) }}
+  </div>
+
+  <div class="section-filters__controls">
+    <button
+      class="section-filters__control view-control js-products-view-btn"
+      data-view="row"
+    >{{ mixins.icon('menu') }}</button>
+    <button
+      class="section-filters__control view-control view-control--active js-products-view-btn"
+      data-view="grid"
+    >{{ mixins.icon('grid') }}</button>
+  </div>
+</div>
+
+<ul class="products-list js-products-list">
+  {% for i in range(0, 9) %}
+  <li class="products-list__item">
+    <a class="product" href="#">
+      <span class="product__img">
+        <img
+          class="js-lazy"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt=""
+          data-src="./img/10.png"
+        />
+      </span>
+
+      <span class="product__content">
+        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+
+        <span class="product__text-wrap">
+          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу 
+            самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо 
+          відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+          
+          <span class="product__index index">Код: 11157300054</span>
+
+          <span class="product__price price">Від 4500 грн</span>
+
+          <span class="product__btn">
+            {{ mixins.btn(
+              title = 'Детальніше',
+              mod = 'btn--transp-text btn--no-hover btn--sm btn--400',
+              isInline = true,
+              href = false
+            ) }}
+          </span>
+        </span>
+      </span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

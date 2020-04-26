@@ -1,0 +1,19 @@
+---
+title: contacts
+page: contacts
+language: uk
+breadcrumbs: {
+  list: [
+    { link: 'Головна' },
+    { item: '-' },
+    { item: 'Контакти', modItem: 'breadcrumbs__current-item' }
+  ]
+}
+---
+{% extends "layouts/_default.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-contacts.html" %}
+  {% include "partials/sections/_s-contacts-blocks.html" %}
+  {% include "partials/sections/_s-form.html" %}
+{% endblock %}

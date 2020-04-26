@@ -1,0 +1,31 @@
+.nav
+  $this: &
+
+  ul
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+  li
+    margin-left: rem(10)
+    margin-right: rem(10)
+
+  a
+    +tr(color .3s)
+    +hover-focus
+      @extend #{$this}__current-item
+
+  &__current-item
+    color: $accent
+
+  &--footer
+    ul
+      display: block
+
+    li
+      margin-left: 0
+      margin-right: 0
+      
+      +notlast
+        margin-bottom: rem(10)
+

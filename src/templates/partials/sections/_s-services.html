@@ -1,0 +1,36 @@
+<!-- begin section -->
+<section class="section">
+  {% if sServices.hr %}
+
+  <div class="container">
+    <h1 class="section__title title title--h1">{{ sServices.title }}</h1>
+  </div>
+
+  <hr class="section__hr hr">
+
+  <div class="container">
+    <ul class="grid">
+      {% for i in services.list %}
+      <li class="col col--6">
+        {% include "partials/_service-item.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% else %}  
+
+  <div class="container">
+    <h1 class="section__title title title--h1">{{ sServices.title }}</h1>    
+
+    <ul class="grid">
+      {% for i in services.list %}
+      <li class="col col--6">
+        {% include "partials/_service-item.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+<!-- end section -->

@@ -1,0 +1,71 @@
+.about-block
+  $this: &
+  position: relative
+  min-height: vw(735)
+
+  overflow: hidden
+
+  +before
+    position: absolute
+    z-index: 0
+    background-color: $c-text
+    top: 0
+    left: 0
+    right: 0
+    bottom: vw(100)
+
+  &__caption
+    position: relative
+    z-index: 2     
+
+  &__caption-inner
+    max-width: rem(855)
+    background-color: $white
+
+    padding-top: rem(70)
+    padding-bottom: rem(70)
+
+    position: relative
+
+    +before
+      position: absolute
+      z-index: 1
+      top: 0
+      bottom: 0
+
+      background-color: $white
+      width: 50vw
+
+  &__title
+    margin-bottom: rem(25)
+    +md
+      margin-bottom: rem(15)
+
+  &__img
+    position: absolute
+    z-index: 1
+    top: 0
+    width: percentagge(1320 / 1920)
+
+    object-fit: cover
+    height: 100%
+
+  &--left
+    #{$this}__img
+      right: 0
+
+    #{$this}__caption-inner
+      +before
+        right: 100%
+
+  &--right
+    #{$this}__img
+      left: 0
+
+    #{$this}__caption-inner
+      margin-left: auto
+      padding-left: rem(70)
+      
+      +before
+        left: 100%
+

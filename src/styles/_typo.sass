@@ -1,2 +1,131 @@
 .title
-  +css-lock(21, 45, 320, 1399, font-size)
+  display: block
+  line-height: 1.1
+  font-weight: 700
+  
+  &--h1
+    font-size: em(120)
+    line-height: .9
+
+  &--h2
+    font-size: em(45)
+
+  &--h2-sm
+    font-size: em(30)
+
+  &--h3
+    font-size: em(24)
+
+  &--h4
+    font-size: 1em
+
+
+  &--reg
+    font-weight: 400
+
+  &--ttu
+    text-transform: uppercase
+
+.descr-list
+  a
+    +tr(color .3s)
+    +hover-focus
+      color: $accent
+      
+  &__title
+    font-weight: 700
+
+  &__text
+    margin-bottom: rem(10)
+
+.text-label
+  display: flex
+  align-items: center
+
+  position: relative
+
+  font-size: rem(19)
+  text-transform: uppercase
+
+  +before
+    width: rem(65)
+    margin-right: 1em
+    border-top: 1px solid currentColor
+
+.article
+  p, ul, ol, img, h1, h2, h3, h4, h5, h6, figure, blockquote
+    +notlast
+      margin-bottom: rem(25)
+      +md
+        margin-bottom: rem(15)
+
+  ul:not(.list)
+    li
+      +notlast
+        margin-bottom: rem(25)
+        +md
+          margin-bottom: rem(15)
+
+  ul:not(.list)
+    li
+      &::before
+        content: '-'
+        display: inline-block
+        margin-right: .5em
+
+  ol
+    +counter('article', '.')
+    li
+      &::before
+        display: inline-block
+        margin-right: .5em
+
+  h1, h2, h3, h4, h5, h6
+    @extend .title
+
+  h1
+    &:not(.title)
+      @extend .title--h2
+
+  h2
+    &:not(.title)
+      @extend .title--h3
+
+  a
+    color: $accent
+    +hover-focus
+      text-decoration: underline
+
+  &--short
+    p, ul, ol
+      max-width: rem(500)
+
+.list
+  li
+    +list-bullet
+    &::before
+      margin-right: .5em
+
+blockquote
+  max-width: rem(1050)
+  margin-left: auto
+  margin-right: auto
+
+  background-color: $lighten
+  border-radius: $radius-sm
+  overflow: hidden
+
+  padding: rem(25)
+
+  border-left: 4px solid  $accent
+
+.link-arr
+  display: inline-flex
+  align-items: center
+
+  +after
+    +icon-arrow(.5, .5, .1, currentColor, 225)
+    display: block
+    margin-left: 1em
+    position: relative
+    top: .1.5em

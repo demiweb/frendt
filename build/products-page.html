@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title>products-page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <div class="out__header header">
+        <div class="container">
+          <div class="header__inner">
+            <a href="/" class="header__logo logo">
+              <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/logo.svg" />
+            </a>
+            <!-- begin nav -->
+            <nav class="nav header__nav js-menu">
+              <ul class="">
+                <li class=" nav__current-item"><a href="#">Головна</a></li>
+                <li><a href="#">Про компанію</a></li>
+                <li><a href="#">Продукти</a></li>
+                <li><a href="#">Точне землеробство</a></li>
+                <li><a href="#">Сервіс</a></li>
+                <li><a href="#">Новини</a></li>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="#">Сезонні знижки</a></li>
+              </ul>
+            </nav>
+            <!-- end nav-->
+            <button type="button" aria-label="Toggle menu" class="header__burger burger js-burger"><span></span></button>
+            <!-- begin menu -->
+            <nav class="header__menu menu js-menu" data-block="header__menu" data-menu="main">
+              <button type="button" aria-label="Close menu" class="menu__close js-menu-close"> Закрити <svg viewBox="0 0 409.806 409.806" class="icon icon--close" width="1.000em" height="1em">
+                  <path d="M228.929 205.01L404.596 29.343c6.78-6.548 6.968-17.352.42-24.132-6.548-6.78-17.352-6.968-24.132-.42-.142.137-.282.277-.42.42L204.796 180.878 29.129 5.21c-6.78-6.548-17.584-6.36-24.132.42-6.388 6.614-6.388 17.099 0 23.713L180.664 205.01 4.997 380.677c-6.663 6.664-6.663 17.468 0 24.132 6.664 6.662 17.468 6.662 24.132 0l175.667-175.667 175.667 175.667c6.78 6.548 17.584 6.36 24.132-.42 6.387-6.614 6.387-17.099 0-23.712L228.929 205.01z" />
+                </svg>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__item js-lazy" data-background-image="./img/menu/23184.jpg">
+                  <a href="#">
+                    <span> Про компанію <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/23184.jpg">
+                  <a href="#">
+                    <span> Продукти <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/8169.jpg">
+                  <a href="#">
+                    <span> Точне землеробство <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/412611-PD51HB-765.jpg">
+                  <a href="#">
+                    <span> Сервіс <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/4584.jpg">
+                  <a href="#">
+                    <span> Новини <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/196870-OYDU9R-910.jpg">
+                  <a href="#">
+                    <span> Контакти <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/1162.jpg">
+                  <a href="#">
+                    <span> Сезонні знижки <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu__item js-lazy" data-background-image="./img/menu/3196.jpg">
+                  <a href="#">
+                    <span> Написати нам <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- end menu -->
+            <div class="lang header__lang">
+              <div class="lang__item lang__item--current">
+                <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/Flag_of_Ukraine.svg" />
+              </div>
+              <ul class="lang__panel">
+                <li class="lang__item"><a href="#" class="lang__link">
+                    <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/Flag_of_Russia.svg" />
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end header -->
+      <!-- begin main -->
+      <main class="out__main main">
+        <!-- begin hero -->
+        <section class="hero js-lazy" data-background-image="./img/hero/1236.jpg">
+          <div class="container">
+            <!-- begin breadcrumbs -->
+            <ul class="hero__breadcrumbs breadcrumbs">
+              <li><a href="#">Головна</a></li>
+              <li>-</li>
+              <li><a href="#">Продукти</a></li>
+              <li>-</li>
+              <li class=" breadcrumbs__current-item">RTK-мережа</li>
+            </ul>
+            <!-- end breadcrumbs-->
+            <h1 class="hero__title title title--h2-sm"> RTK-мережа</h1>
+          </div>
+        </section>
+        <!-- end hero -->
+        <!-- begin section -->
+        <section class="section overflow-hidden">
+          <div class="container">
+            <div class="grid">
+              <div class="col col--3">
+                <!-- begin aside -->
+                <aside class="aside">
+                  <div class="aside__block aside__block--no-border aside-block">
+                    <header class="aside-block__header">Категорії</header>
+                    <ul class="aside-block__body aside-categories js-accordion">
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">Hexagon</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">RTK-мережа</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">FlyAgData</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">Farm QA</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">Reichhardt</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">Amity</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">Відеоспостереження </button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">Trade-in</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="aside-categories__item">
+                        <button class="aside-categories__title js-accordion-btn">LED-освітлення</button>
+                        <ul class="aside-categories__sublist js-accordion-item">
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Курсовказівники</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Системи автоматичного водіння</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Gps-приймачі і антени</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Управління висівом і внесенням продуктів</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Моніторинг урожайності. телематика</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Коригувальні сигнали</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Б/у системи</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Аксесуари та коплектуючі</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Електромагнітне обстеження полів і створення електронних карт неоднорідності</a>
+                          </li>
+                          <li class="aside-categories__subitem">
+                            <a href="#" class="aside-categories__link">Rtk модеми, передавачі, ретранслятори, підсилювачі rtk (для передачі та маршрутизації rtk-сигналів)</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="aside__block aside-block">
+                    <header class="aside-block__header">Контакти</header>
+                    <ul class="aside-block__body contacts-list">
+                      <li class="contacts-list__item">
+                        <div class="contacts-list__icon">
+                          <svg viewBox="0 0 512.001 512.001" class="icon icon--telephone" width="1.000em" height="1em">
+                            <path d="M498.808 377.784l-63.633-63.647c-16.978-16.978-46.641-17.007-63.647 0l-10.611 10.611 127.284 127.277 10.607-10.607c17.619-17.62 17.56-46.104 0-63.634zM339.116 345.37c-13.39 10.373-32.492 9.959-44.727-2.303L168.572 217.163c-12.263-12.263-12.676-31.379-2.303-44.736L39.278 45.443c-54.631 63.68-52.495 159.633 7.8 219.928l199.103 199.19c57.86 57.858 152.635 65.532 219.932 7.797L339.116 345.37zM197.503 76.391L133.87 12.744c-16.978-16.978-46.641-17.007-63.647 0L59.612 23.355l127.284 127.277 10.607-10.608c17.618-17.618 17.56-46.102 0-63.633z" />
+                          </svg>
+                        </div>
+                        <!-- begin descr-list -->
+                        <dl class="descr-list">
+                          <dt class="descr-list__title ">Вінниця</dt>
+                          <dd class="descr-list__text "><a href="tel:+380674355014">+380674355014</a></dd>
+                        </dl>
+                        <!-- end descr-list-->
+                      </li>
+                      <li class="contacts-list__item">
+                        <div class="contacts-list__icon">
+                          <svg viewBox="0 0 512.001 512.001" class="icon icon--telephone" width="1.000em" height="1em">
+                            <path d="M498.808 377.784l-63.633-63.647c-16.978-16.978-46.641-17.007-63.647 0l-10.611 10.611 127.284 127.277 10.607-10.607c17.619-17.62 17.56-46.104 0-63.634zM339.116 345.37c-13.39 10.373-32.492 9.959-44.727-2.303L168.572 217.163c-12.263-12.263-12.676-31.379-2.303-44.736L39.278 45.443c-54.631 63.68-52.495 159.633 7.8 219.928l199.103 199.19c57.86 57.858 152.635 65.532 219.932 7.797L339.116 345.37zM197.503 76.391L133.87 12.744c-16.978-16.978-46.641-17.007-63.647 0L59.612 23.355l127.284 127.277 10.607-10.608c17.618-17.618 17.56-46.102 0-63.633z" />
+                          </svg>
+                        </div>
+                        <!-- begin descr-list -->
+                        <dl class="descr-list">
+                          <dt class="descr-list__title ">Київ</dt>
+                          <dd class="descr-list__text "><a href="tel:+380670102102">+380670102102</a></dd>
+                        </dl>
+                        <!-- end descr-list-->
+                      </li>
+                      <li class="contacts-list__item">
+                        <div class="contacts-list__icon">
+                          <svg viewBox="0 0 512.001 512.001" class="icon icon--telephone" width="1.000em" height="1em">
+                            <path d="M498.808 377.784l-63.633-63.647c-16.978-16.978-46.641-17.007-63.647 0l-10.611 10.611 127.284 127.277 10.607-10.607c17.619-17.62 17.56-46.104 0-63.634zM339.116 345.37c-13.39 10.373-32.492 9.959-44.727-2.303L168.572 217.163c-12.263-12.263-12.676-31.379-2.303-44.736L39.278 45.443c-54.631 63.68-52.495 159.633 7.8 219.928l199.103 199.19c57.86 57.858 152.635 65.532 219.932 7.797L339.116 345.37zM197.503 76.391L133.87 12.744c-16.978-16.978-46.641-17.007-63.647 0L59.612 23.355l127.284 127.277 10.607-10.608c17.618-17.618 17.56-46.102 0-63.633z" />
+                          </svg>
+                        </div>
+                        <!-- begin descr-list -->
+                        <dl class="descr-list">
+                          <dt class="descr-list__title ">Контактна особа</dt>
+                          <dd class="descr-list__text ">Віталій Шуберанський</dd>
+                        </dl>
+                        <!-- end descr-list-->
+                      </li>
+                      <li class="contacts-list__item">
+                        <div class="contacts-list__icon">
+                          <svg viewBox="0 0 512 512" class="icon icon--envelope" width="1.000em" height="1em">
+                            <path d="M10.688 95.156C80.958 154.667 204.26 259.365 240.5 292.01c4.865 4.406 10.083 6.646 15.5 6.646 5.406 0 10.615-2.219 15.469-6.604 36.271-32.677 159.573-137.385 229.844-196.896 4.375-3.698 5.042-10.198 1.5-14.719C494.625 69.99 482.417 64 469.333 64H42.667c-13.083 0-25.292 5.99-33.479 16.438-3.542 4.52-2.875 11.02 1.5 14.718z" />
+                            <path d="M505.813 127.406a10.618 10.618 0 00-11.375 1.542C416.51 195.01 317.052 279.688 285.76 307.885c-17.563 15.854-41.938 15.854-59.542-.021-33.354-30.052-145.042-125-208.656-178.917a10.674 10.674 0 00-11.375-1.542A10.674 10.674 0 000 137.083v268.25C0 428.865 19.135 448 42.667 448h426.667C492.865 448 512 428.865 512 405.333v-268.25a10.66 10.66 0 00-6.187-9.677z" />
+                          </svg>
+                        </div>
+                        <!-- begin descr-list -->
+                        <dl class="descr-list">
+                          <dt class="descr-list__title ">E-mail</dt>
+                          <dd class="descr-list__text "><a href="mailto:info@frendt.com.ua">info@frendt.com.ua</a></dd>
+                        </dl>
+                        <!-- end descr-list-->
+                      </li>
+                      <li class="contacts-list__item">
+                        <div class="contacts-list__icon">
+                          <svg viewBox="0 0 512.002 512.002" class="icon icon--technics" width="1.000em" height="1em">
+                            <path d="M153.557 89.912l10.605-10.605c6.91-6.91 5.451-18.465-2.886-23.467L80.931 7.631C59.837-4.996 33.001-1.7 15.672 15.673-1.701 33.032-4.997 59.868 7.63 80.932l48.208 80.332c5.008 8.347 16.62 9.794 23.467 2.886l10.62-10.605 81.154 81.03 63.561-63.567-81.083-81.096z" />
+                            <path d="M501.776 59.732c-4.407-9.245-16.77-11.547-24.141-4.146L438.831 94.39c-5.684 5.684-15.527 5.684-21.211 0-5.845-5.845-5.845-15.366 0-21.211l38.804-38.804c7.299-7.299 5.202-19.685-4.146-24.141-40.093-19.16-88.11-10.913-119.517 20.522-28.843 28.828-38.159 71.675-24.683 109.512L140.259 308.081c-37.808-13.477-80.669-4.16-109.512 24.683-31.421 31.421-39.668 79.453-20.522 119.517 4.467 9.371 16.861 11.425 24.141 4.146l38.804-38.804c5.859-5.83 15.381-5.845 21.211.015 5.843 5.813 5.886 15.279 0 21.196l-38.804 38.804c-7.299 7.299-5.202 19.685 4.146 24.141a104.537 104.537 0 0045.145 10.223c27.305 0 54.243-10.62 74.355-30.747 28.857-28.828 38.159-71.675 24.683-109.512l167.822-167.811c37.793 13.462 80.669 4.16 109.526-24.683 31.421-31.421 39.668-79.453 20.522-119.517z" />
+                            <path d="M489.857 385.163c-50.919-50.732-78.834-70.888-138.525-117.309l-84.831 84.84c41.958 53.86 67.365 88.599 115.016 136.267 15.586 15.586 36.299 22.857 56.675 22.857 14.956 0 29.722-3.551 42.129-12.471 18.091-13.037 29.487-33.12 31.26-55.078 1.772-21.987-6.138-43.521-21.724-59.106zm-43.205 61.55c-5.972 5.44-15.277 4.918-20.989-.794l-59.405-59.405c-5.712-5.712-6.234-15.017-.794-20.989 5.807-6.374 15.679-6.547 21.707-.52l60 60c6.028 6.029 5.855 15.901-.519 21.708z" />
+                          </svg>
+                        </div>
+                        <!-- begin descr-list -->
+                        <dl class="descr-list">
+                          <dt class="descr-list__title ">Сервісний центр</dt>
+                          <dd class="descr-list__text ">Вінницька обл., с.Писарівка</dd>
+                        </dl>
+                        <!-- end descr-list-->
+                      </li>
+                      <li class="contacts-list__item">
+                        <div class="contacts-list__icon">
+                          <svg viewBox="0 0 512 512" class="icon icon--pin" width="1.000em" height="1em">
+                            <path d="M256 0C153.755 0 70.573 83.182 70.573 185.426c0 126.888 165.939 313.167 173.004 321.035 6.636 7.391 18.222 7.378 24.846 0 7.065-7.868 173.004-194.147 173.004-321.035C441.425 83.182 358.244 0 256 0zm0 278.719c-51.442 0-93.292-41.851-93.292-93.293S204.559 92.134 256 92.134s93.291 41.851 93.291 93.293-41.85 93.292-93.291 93.292z" />
+                          </svg>
+                        </div>
+                        <!-- begin descr-list -->
+                        <dl class="descr-list">
+                          <dt class="descr-list__title ">Головний офіс у Вінниці</dt>
+                          <dd class="descr-list__text ">просп.Юності, 10А</dd>
+                        </dl>
+                        <!-- end descr-list-->
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="aside__block aside-block">
+                    <header class="aside-block__header">мапа</header>
+                    <div class="aside-block__body aside-block__map map">
+                      <iframe class="js-lazy" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.4926350878673!2d28.410408615569022!3d49.22914847932553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5d5b07dc93e3%3A0xf23f321f23bcd59f!2z0L_RgNC-0YHQvy4g0K7QvdC-0YHRgtC4LCAxMCwg0JLQuNC90L3QuNGG0LAsINCS0LjQvdC90LjRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMjEwMDA!5e0!3m2!1sru!2sua!4v1587882541055!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                  </div>
+                </aside>
+                <!-- end aside -->
+              </div>
+              <div class="col col--9">
+                <div class="section__filters section-filters">
+                  <div class="section-filters__select">
+                    <!-- begin select -->
+                    <div class="input input--select input--row">
+                      <label class="input__label">Сортувати:</label>
+                      <select class="js-select">
+                        <option value="1">За зростанням ціни</option>
+                        <option value="2">За зростанням ціни-1</option>
+                        <option value="3">За зростанням ціни-2</option>
+                        <option value="4">За зростанням ціни-3</option>
+                      </select>
+                    </div>
+                    <!-- end select -->
+                  </div>
+                  <div class="section-filters__controls">
+                    <button class="section-filters__control view-control js-products-view-btn" data-view="row">
+                      <svg viewBox="0 0 384 384" class="icon icon--menu" width="1.000em" height="1em">
+                        <path d="M0 277.333h384V320H0zM0 170.667h384v42.667H0zM0 64h384v42.667H0z" />
+                      </svg>
+                    </button>
+                    <button class="section-filters__control view-control view-control--active js-products-view-btn" data-view="grid">
+                      <svg viewBox="0 0 341.333 341.333" class="icon icon--grid" width="1.000em" height="1em">
+                        <path d="M128 128h85.333v85.333H128zM0 0h85.333v85.333H0zM128 256h85.333v85.333H128zM0 128h85.333v85.333H0zM0 256h85.333v85.333H0zM256 0h85.333v85.333H256zM128 0h85.333v85.333H128zM256 128h85.333v85.333H256zM256 256h85.333v85.333H256z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <ul class="products-list js-products-list">
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="products-list__item">
+                    <a class="product" href="#">
+                      <span class="product__img">
+                        <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/10.png" />
+                      </span>
+                      <span class="product__content">
+                        <span class="product__title title title--h4 title--ttu">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</span>
+                        <span class="product__text-wrap">
+                          <span class="product__text">Супутниковий GNSS приймач GPS + ГЛОНАСС забезпечує високу точність і цілодобову роботу самохідної техніки, яка обладнана системою автоматичного водіння Topcon. Ми допоможемо відремонтувати неробочий GNSS прійомнік, надамо гарантію і пре необхідності встановимо...</span>
+                          <span class="product__index index">Код: 11157300054</span>
+                          <span class="product__price price">Від 4500 грн</span>
+                          <span class="product__btn">
+                            <span class="btn btn--transp-text btn--no-hover btn--sm btn--400">Детальніше</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- begin pagination -->
+                <ul class="section__pagination pagination">
+                  <li><a href="#" class=" prev">
+                      <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </a></li>
+                  <li class=" pagination__current-item"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li>...</li>
+                  <li><a href="#">18</a></li>
+                  <li><a href="#">19</a></li>
+                  <li><a href="#" class=" next">
+                      <svg viewBox="0 0 512 512" class="icon icon--right-arrow" width="1.000em" height="1em">
+                        <path d="M506.134 241.843l-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" />
+                      </svg>
+                    </a></li>
+                </ul>
+                <!-- end pagination-->
+                <!-- begin section -->
+                <div class="section">
+                  <div class="container">
+                    <h2 class="section__title title title--h2-sm text--center">Також рекомендуємо</h2>
+                    <ul class="grid">
+                      <li class="col col--4">
+                        <div class="card">
+                          <div class="card__img">
+                            <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/item.jpg" />
+                          </div>
+                          <div class="card__content">
+                            <div class="card__index index">Код: 11157300054</div>
+                            <div class="card__text-wrap">
+                              <p class="card__text">Ремонт і реставрація проводки та деталей електрообладнання (сільгосптехніка...</p>
+                              <div class="card__price price">Від 4500 грн</div>
+                            </div>
+                            <div class="card__btn">
+                              <a href="#" class="btn btn--sm">Детальніше</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col col--4">
+                        <div class="card">
+                          <div class="card__img">
+                            <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/item.jpg" />
+                          </div>
+                          <div class="card__content">
+                            <div class="card__index index">Код: 11157300054</div>
+                            <div class="card__text-wrap">
+                              <p class="card__text">Ремонт і реставрація проводки та деталей електрообладнання (сільгосптехніка...</p>
+                              <div class="card__price price">Від 4500 грн</div>
+                            </div>
+                            <div class="card__btn">
+                              <a href="#" class="btn btn--sm">Детальніше</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col col--4">
+                        <div class="card">
+                          <div class="card__img">
+                            <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/item.jpg" />
+                          </div>
+                          <div class="card__content">
+                            <div class="card__index index">Код: 11157300054</div>
+                            <div class="card__text-wrap">
+                              <p class="card__text">Ремонт і реставрація проводки та деталей електрообладнання (сільгосптехніка...</p>
+                              <div class="card__price price">Від 4500 грн</div>
+                            </div>
+                            <div class="card__btn">
+                              <a href="#" class="btn btn--sm">Детальніше</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- end section -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+      </main>
+      <!-- end main -->
+      <!-- begin footer -->
+      <footer class="out__footer footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="grid">
+              <div class="col col--3">
+                <a href="/" class="footer__logo logo">
+                  <img class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-src="./img/logo.svg" />
+                </a>
+                <p class="footer__text"> TOB «ФРЕНДТ» спеціалізується на системах точного землеробства  та більше 6 років є одним з найбільших операторів по впровадженню інновацій в даній сфері </p>
+              </div>
+              <div class="col--3">
+                <h3 class="footer__title title title--h3 title--reg">Послуги</h3>
+                <!-- begin nav -->
+                <nav class="nav nav--footer">
+                  <ul class="">
+                    <li><a href="#">Перед основним грунтообробітком</a></li>
+                    <li><a href="#">Основний грунтообробіток</a></li>
+                    <li><a href="#">Посів</a></li>
+                    <li><a href="#">Внесення ЗЗР</a></li>
+                    <li><a href="#">Збір урожаю</a></li>
+                    <li><a href="#">Аналітика</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav-->
+              </div>
+              <div class="col--2">
+                <h3 class="footer__title title title--h3 title--reg">Клієнтам</h3>
+                <!-- begin nav -->
+                <nav class="nav nav--footer">
+                  <ul class="">
+                    <li><a href="#">Про компанію</a></li>
+                    <li><a href="#">Продукти</a></li>
+                    <li><a href="#">Точне землеробство</a></li>
+                    <li><a href="#">Сервіс</a></li>
+                    <li><a href="#">Новини</a></li>
+                    <li><a href="#">Сезонні знижки</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav-->
+              </div>
+              <div class="col--2">
+                <h3 class="footer__title title title--h3 title--reg">Контакти</h3>
+                <!-- begin descr-list -->
+                <dl class="descr-list">
+                  <dt class="descr-list__title ">Вінниця</dt>
+                  <dd class="descr-list__text "><a href="tel:+380674355014">+380674355014</a></dd>
+                  <dt class="descr-list__title ">Київ</dt>
+                  <dd class="descr-list__text "><a href="tel:+380670102102">+380670102102</a></dd>
+                  <dt class="descr-list__title ">E-mail</dt>
+                  <dd class="descr-list__text "><a href="mailto:adv@frendt.com.ua">adv@frendt.com.ua</a></dd>
+                </dl>
+                <!-- end descr-list-->
+              </div>
+              <div class="col--2">
+                <h3 class="footer__title title title--h3 title--reg">Адреса</h3>
+                <!-- begin descr-list -->
+                <dl class="descr-list">
+                  <dt class="descr-list__title ">Сервісний центр у Вінниці</dt>
+                  <dd class="descr-list__text ">Пр. Юності, 10а</dd>
+                  <dt class="descr-list__title ">Представництво у Києві:</dt>
+                  <dd class="descr-list__text ">Пр. Перемоги, 123, оф. 304</dd>
+                </dl>
+                <!-- end descr-list-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+      <!-- begin popup -->
+      <div class="popup js-popup" data-popup="cost">
+        <div class="popup__inner">
+          <button class="popup__close close js-popup-close"></button>
+          <!-- begin form -->
+          <div class="form popup__form">
+            <h2 class="form__title title title--h2">Дізнатися вартість</h2>
+            <div class="form__subttl">
+              <p>Спеціалісти з "ФРЕНДТ" завжди раді вашому повідомленню.</p>
+              <p>Не зволікайте, та зв’яжіться з нами за допомогою форми нижче!</p>
+            </div>
+            <form>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Ім’я">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="tel" placeholder="+38 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="email" placeholder="E-mail">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin textarea -->
+                <div class="input input--textarea">
+                  <label class="input__label">Вартість якого товару або послуги вас цікавить</label>
+                  <textarea placeholder="Напишіть назву товару або послуги"></textarea>
+                </div>
+                <!-- end textarea -->
+              </div>
+              <div class="form__field form__btn">
+                <button class="btn">Дізнатися вартість</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+      <!-- end popup -->
+      <!-- begin popup -->
+      <div class="popup js-popup" data-popup="consult">
+        <div class="popup__inner">
+          <button class="popup__close close js-popup-close"></button>
+          <!-- begin form -->
+          <div class="form popup__form">
+            <h2 class="form__title title title--h2">Замовити консультацію</h2>
+            <div class="form__subttl">
+              <p>Спеціалісти з "ФРЕНДТ" завжди раді вашому повідомленню.</p>
+              <p>Не зволікайте, та зв’яжіться з нами за допомогою форми нижче!</p>
+            </div>
+            <form>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Ім’я">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="tel" placeholder="+38 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="email" placeholder="E-mail">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin textarea -->
+                <div class="input input--textarea">
+                  <label class="input__label">Коментар</label>
+                  <textarea placeholder="Коротко опишіть ваше питання та вкажіть назву компанії"></textarea>
+                </div>
+                <!-- end textarea -->
+              </div>
+              <div class="form__field form__btn">
+                <button class="btn">Зв’язатися з нами</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+      <!-- end popup -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script id="app-script" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

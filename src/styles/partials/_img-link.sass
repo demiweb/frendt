@@ -1,0 +1,96 @@
+.img-link
+  $this: &
+
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  
+  min-height: vw(440)
+
+  +cover
+  background-color: $light
+
+  border-radius: $radius
+  overflow: hidden
+  position: relative
+
+  text-transform: uppercase
+  font-weight: 700
+
+  +tr(color .3s)
+
+  +hover-focus
+    color: $accent
+
+  &__content
+    display: flex
+    align-items: flex-end
+
+    background-color: $white
+    max-width: 80%
+    padding: rem(20)
+
+    +before
+      +coverdiv
+      background-color: $accent
+      +hidden
+      +tr(opacity .3s, visibility .3s)
+
+  &__content-left
+    display: block
+    padding-right: rem(10)
+
+    position: relative
+    z-index: 1
+
+  &__date,
+  &__icon
+    +tr(opacity .5s, visibility .5s)
+
+  &__icon
+    flex-shrink: 0
+    position: relative
+    z-index: 1
+    font-size: rem(30)
+
+    +tr(max-height .5s)
+
+  &__btn
+    max-height: 0
+    overflow: hidden
+    display: block
+    text-transform: none   
+
+    position: relative
+    top: rem(-15)
+
+    +tr(max-height .5s)
+
+  &__date
+    display: block
+    text-transform: none
+    font-weight: 400
+
+  &__text
+    display: block
+    margin-bottom: rem(50)
+
+
+  &--lg
+    +hover-focus
+      color: $white
+
+      #{$this}__content
+        +before
+          +visible
+
+      #{$this}__date,
+      #{$this}__icon
+        +hidden  
+
+      #{$this}__btn
+        max-height: rem(50)
+
+    #{$this}__content
+      max-width: 50%
+

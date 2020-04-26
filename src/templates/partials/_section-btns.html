@@ -1,0 +1,19 @@
+<div class="section__btns{% if sButtonsMod %} {{ sButtonsMod }}{% endif %}">
+  <div class="section__btn">
+    {{ mixins.btn(
+      title = 'Замовити консультацію',
+      mod = 'btn--lg js-popup-open',
+      href = false,
+      attributes = { 'data-popup-target': 'consult' }
+    ) }}
+  </div>
+
+  <div class="section__btn">
+    {{ mixins.btn(
+      title = 'Дізнатися вартість',
+      mod = 'btn--lg btn--transp-text btn--400 js-popup-open',
+      href = false,
+      attributes = { 'data-popup-target': 'cost' }
+    ) }}
+  </div>
+</div>

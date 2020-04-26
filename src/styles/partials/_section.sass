@@ -1,0 +1,98 @@
+.section
+  padding-top: rem(50)
+  padding-bottom: rem(50)
+
+  &__title
+    margin-bottom: rem(30)
+    +md
+      margin-bottom: rem(15)
+
+    &--mb-lg
+      margin-bottom: rem(70)
+      +lg
+        margin-bottom: rem(50)
+      +md
+        margin-bottom: rem(30)
+
+  &__btns
+    display: flex
+    justify-content: center
+
+    margin-top: rem(30)
+
+    &--left
+      justify-content: flex-start
+
+  &__btn
+    margin-left: rem(15) / 2
+    margin-right: rem(15) / 2
+
+  &__block
+    margin-bottom: rem(30)
+
+  &__pagination
+    margin-top: rem(50)
+    +lg
+      margin-top: rem(30)
+
+  &__filters
+    margin-bottom: rem(25)
+
+  &__hr
+    margin-top: rem(50)
+    margin-bottom: rem(50)
+
+  &--bg
+    +cover
+    background-color: $light
+
+.section-block
+  &__title
+    margin-bottom: rem(25)
+    +md
+      margin-bottom: rem(15)
+
+  &__text
+    margin-bottom: rem(15)
+
+.section-img
+  $this: &
+
+  position: relative
+  padding: 0  0 rem(40) rem(40)
+  img
+    position: relative
+    z-index: 1
+
+  +before
+    position: absolute
+    z-index: 1
+    right: rem(20)
+    top: rem(20)
+    left: 0    
+    bottom: 0
+
+    background-color: $c-text
+
+  &--wide
+    +before
+      right: percentage(750 / 1410)
+
+    
+
+.section-filters
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  &__controls
+    display: flex
+    align-items: center
+
+  &__control
+    &:first-child
+      margin-right: rem(10)
+
+  &__select
+    max-width: rem(500)
+      

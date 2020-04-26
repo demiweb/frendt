@@ -1,0 +1,21 @@
+---
+title: blog
+page: blog
+language: uk
+breadcrumbs: {
+  list: [
+    { link: 'Головна ' },
+    { item: '-' },
+    { item: 'Новини', modItem: 'breadcrumbs__current-item' }
+  ]
+}
+sNews: {
+  title: 'Новини'
+}
+---
+{% extends "layouts/_default.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-news.html" %}
+  {% include "partials/sections/_s-more-news.html" %}
+{% endblock %}

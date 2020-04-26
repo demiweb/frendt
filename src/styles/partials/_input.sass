@@ -1,0 +1,109 @@
+.input
+  $this: &
+
+  text-align: left
+  #{$text-inputs}
+    width: 100%
+    border-bottom: 1px solid $light
+    padding: .3rem 0
+    height: rem(35)
+    +placeholder
+      color: inherit
+
+    +tr(border-color .3s)
+    &:focus
+      border-color: $accent
+
+  textarea
+    border: 1px solid  $light
+    border-radius: $radius-sm
+    font-size: em(14)
+
+    padding: rem(10) rem(12)
+    min-height: rem(140)
+
+    +placeholder
+      color: #adadad
+
+  &__label
+    display: block
+    margin-bottom: rem(5)
+
+  &--row
+    display: flex
+    align-items: center
+
+    #{$this}__label
+      margin-bottom: 0
+      margin-right: rem(10)
+
+
+.custom-select
+  $this: &
+
+  position: relative
+  color: #adadad
+
+  max-width: 100%
+
+  select
+    opacity: 0
+    position: absolute
+    z-index: -1
+    width: 0
+    height: 0
+    overflow: hidden
+
+  &__opener
+    border-radius: rem(35)
+    border: 1px solid  $light
+
+    padding: rem(5) rem(15) rem(6)
+    padding-right: rem(30)
+    
+    position: relative
+    cursor: pointer
+
+    +text-overflow
+
+    +before
+      +icon-arrow(.5, .5, .1, currentColor, -45)
+      display: block
+      position: absolute
+      top: 50%
+      right: rem(15)
+      transform: translate(0, -50%) rotate(-45deg)
+
+  &__panel
+    position: absolute
+    z-index: 5
+    top: calc(100% + #{rem(10)})
+    left: 0
+    right: 0
+
+    background-color: $white
+    border: 1px solid  $light
+    border-radius: $radius
+
+    max-height: 250px
+    overflow: auto
+
+    +ready
+      +tr(opacity .3s, visibility .3s)
+
+    +hidden
+
+  &__option
+    cursor: pointer
+    padding: rem(5) rem(15)
+    +tr(color .3s)
+
+    +hover-focus
+      @extend #{$this}__option--selected
+
+    &--selected
+      color: $accent
+
+  &--open
+    #{$this}__panel
+      +visible

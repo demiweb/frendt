@@ -1,0 +1,17 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h1 class="section__title section__title--mb-lg title title--h1">{{ sNews.title }}</h1>
+
+    <ul class="grid">
+      {% for i in range(0, 6) %}
+        <li class="col col--6">
+          {% include "partials/_img-link.html" %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% include "partials/_pagination.html" %}
+  </div>
+</section>
+<!-- end section -->

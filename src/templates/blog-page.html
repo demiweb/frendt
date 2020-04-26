@@ -1,0 +1,20 @@
+---
+title: blog-page
+page: blog-page
+language: uk
+breadcrumbs: {
+  list: [
+    { link: 'Головна' },
+    { item: '-' },
+    { link: 'Новини' },
+    { item: '-' },
+    { item: 'Сучасні технології точного землеробства, які змінять світ у найближчому майбутньому', modItem: 'breadcrumbs__current-item' }
+  ]
+}
+---
+{% extends "layouts/_default.html" %}
+
+{% block content %}
+  {% include "partials/sections/_blog-page.html" %}
+  {% include "partials/sections/_s-more-news.html" %}
+{% endblock %}

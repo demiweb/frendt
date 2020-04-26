@@ -1,0 +1,84 @@
+.contacts
+  background-color: #fafafa
+  border-radius: $radius
+
+  padding: rem(45)
+
+  a
+    +tr(color .3s)
+    +hover-focus
+      color: $accent
+
+  &__title
+    margin-bottom: rem(10)
+
+  &__text
+    margin-bottom: rem(20)
+
+.contacts-block
+  display: flex
+  flex-direction: column
+
+  &__img
+    +cover
+    background-color: $light
+    padding-top: percentage(370 / 690)
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    padding: rem(30) 0 rem(80)
+
+  &__text
+    margin-bottom: rem(20)
+    font-size: em(24)
+
+  &__text-sm
+    margin-bottom: rem(15)
+    flex-grow: 1
+    a
+      text-decoration: underline
+      color: $accent
+
+  &__link
+    color: $accent
+
+.contacts-list
+  padding: rem(35) rem(20)
+
+  &__item
+    display: flex
+    align-items: center
+    +notlast
+      margin-bottom: rem(35)
+
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+
+    width: rem(47)
+    height: rem(47)
+
+    color: $accent
+
+    border-radius: 50%
+    border: 1px solid currentColor
+
+    margin-right: rem(10)
+
+    .icon
+      font-size: rem(25)
+
+.map
+  position: relative
+  iframe
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    

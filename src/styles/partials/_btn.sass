@@ -1,0 +1,53 @@
+.btn
+  $this: &
+
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+  color: $white
+  font-weight: 700
+  text-align: center
+
+  background-color: $accent
+  border: 1px solid  $accent
+  border-radius: rem(30)
+
+  padding: rem(10) rem(15) rem(12)
+  min-width: rem(204)
+
+  +tr(background-color .3s, color .3s)
+
+  +hover-focus
+    &:not(#{$this}--no-hover)
+      background-color: transparent
+      color: $accent
+
+  &--lg
+    font-size: em(18)
+    padding: rem(19) rem(15) rem(21)
+    border-radius: rem(40)
+    min-width: rem(280)
+
+  &--sm
+    min-width: rem(170)
+    padding: rem(6) rem(15) rem(10)
+
+  &--transp-text
+    color: $c-text
+    border-color: currentColor
+    background-color: transparent
+
+  &--white
+    background-color: $white
+    border-color: $white
+    color: $accent
+
+  &--arr
+    +after
+      +icon-arrow(.5, .5, .1, currentColor, 225)
+      display: block
+      margin-left: 1em
+
+  &--400
+    @extend .fw--400

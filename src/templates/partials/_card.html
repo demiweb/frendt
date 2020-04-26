@@ -1,0 +1,31 @@
+<div class="card{% if i.mod %} {{ i.mod }}{% endif %}">
+  <div class="card__img">
+    <img
+      class="js-lazy"
+      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+      alt=""
+      data-src="./img/item.jpg"
+    />
+  </div>
+
+  <div class="card__content">
+    <div class="card__index index">Код: 11157300054</div>
+
+    <div class="card__text-wrap">
+      <p class="card__text">Ремонт і реставрація проводки та деталей 
+      електрообладнання (сільгосптехніка...</p>
+      
+      <div class="card__price price">Від 4500 грн</div>
+    </div>
+
+    <div class="card__btn">
+      {{ mixins.btn(
+        title = 'Детальніше',
+        mod = 'btn--sm'
+      ) }}
+    </div>
+
+    
+
+  </div>
+</div>

@@ -20,6 +20,8 @@ export default class MySlider {
 
     this.options = getOptions({
       navigation: this.navigation,
+      nextButton: this.navigation.nextEl,
+      prevButton: this.navigation.prevEl,
       pagination: this.pagination,
       onInit: setLazy,
     })[this.nameMod || this.name]

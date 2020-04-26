@@ -1,0 +1,35 @@
+<!-- begin section -->
+<section class="section overflow-hidden">
+  <div class="container">
+    <div class="grid">
+      <div class="col col--3">
+        {% include "partials/products/_aside.html" %}
+      </div>
+
+      <div class="col col--9">
+        {% include "partials/products/_products-list.html" %}
+
+        {% include "partials/_pagination.html" %}
+
+        <!-- begin section -->
+        <div class="section">
+          <div class="container">
+            <h2 class="section__title title title--h2-sm text--center">Також рекомендуємо</h2>
+
+            <ul class="grid">
+              {% for i in range(0, 3) %}
+              <li class="col col--4">
+                {% include "partials/_card.html" %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <!-- end section -->
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

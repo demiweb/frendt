@@ -1,0 +1,81 @@
+{%set
+blocks = [
+  {
+    img: 'Ungroup-1.jpg',
+    text: '
+      Головний офіс у м.Вінниця. Звертайтеся за телефоном: <br>
+      <a href="tel:+380670102102"><strong>+38 (067) 010-21-02</strong></a> або пишіть на e-mail:
+      <a href="mailto:info@frendt.com.ua">info@frendt.com.ua</a>
+    ',
+    textSm: '
+      Звертайтеся до наших представників у м.Вінниця за адресою: просп. Юності, 10А. Відділ працює з 10:00 до 18:00 та відповідає на питання щодо агро техніки та сервісного обслуговування засобів для агро промисловості. 
+      <a href="#">Дивитися на карті</a>
+    '
+  },
+  {
+    img: 'Ungroup.jpg',
+    text: '
+      Головний офіс у м.Вінниця. Звертайтеся за телефоном: <br>
+      <a href="tel:+380670102102"><strong>+38 (067) 010-21-02</strong></a> або пишіть на e-mail:
+      <a href="mailto:info@frendt.com.ua">info@frendt.com.ua</a>
+    ',
+    textSm: '
+      Звертайтеся до наших представників у м.Вінниця за адресою: просп. Юності, 10А. Відділ працює з 10:00 до 18:00 та відповідає на питання щодо агро техніки та сервісного обслуговування засобів для агро промисловості. 
+      <a href="#">Дивитися на карті</a>
+    '
+  },
+  {
+    img: 'Reflection.jpg',
+    text: '
+      Головний офіс у м.Вінниця. Звертайтеся за телефоном: <br>
+      <a href="tel:+380670102102"><strong>+38 (067) 010-21-02</strong></a> або пишіть на e-mail:
+      <a href="mailto:info@frendt.com.ua">info@frendt.com.ua</a>
+    ',
+    textSm: '
+      Звертайтеся до наших представників у м.Вінниця за адресою: просп. Юності, 10А. Відділ працює з 10:00 до 18:00 та відповідає на питання щодо агро техніки та сервісного обслуговування засобів для агро промисловості. 
+      <a href="#">Дивитися на карті</a>
+    '
+  },
+  {
+    img: 'iPhone.jpg',
+    text: '
+      Головний офіс у м.Вінниця. Звертайтеся за телефоном: <br>
+      <a href="tel:+380670102102"><strong>+38 (067) 010-21-02</strong></a> або пишіть на e-mail:
+      <a href="mailto:info@frendt.com.ua">info@frendt.com.ua</a>
+    ',
+    textSm: '
+      Звертайтеся до наших представників у м.Вінниця за адресою: просп. Юності, 10А. Відділ працює з 10:00 до 18:00 та відповідає на питання щодо агро техніки та сервісного обслуговування засобів для агро промисловості. 
+      <a href="#">Дивитися на карті</a>
+    '
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h1 class="section__title title title--h1">Зв’яжіться з нами</h1>
+
+    <ul class="grid">
+      {% for i in blocks %}
+      <li class="col col--6">
+        <div class="contacts-block">
+          <div
+            class="contacts-block__img js-lazy"
+            data-background-image="./img/{{ i.img }}"
+          ></div>
+
+          <div class="contacts-block__content">
+            <div class="contacts-block__text">{{ i.text | safe }}</div>
+
+            <div class="contacts-block__text-sm">{{ i.textSm | safe }}</div>
+
+            <a href="#" class="contacts-block__link link-arr">Заповнити форму зворотнього зв’язку </a>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- end section -->

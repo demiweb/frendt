@@ -1,0 +1,17 @@
+.breadcrumbs
+  $this: &
+
+  font-size: em(14)
+
+  li
+    display: inline-block
+    vertical-align: middle
+
+  a
+    +tr(color .3s)
+    +hover-focus
+      @extend #{$this}__current-item
+
+  &__current-item
+    color: #adadad
+    

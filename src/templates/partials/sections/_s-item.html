@@ -1,0 +1,91 @@
+{%set
+table = [
+  {
+    cols: [
+      { text: 'Режим зйомки "День / ніч"' },
+      { text: 'Так' }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Перемикання режимів "День / ніч"' },
+      { text: 'ICR' }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Режим зйомки "День / ніч"' },
+      { text: 'Ні' }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Стан' },
+      { text: 'Новий' }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Режим зйомки "День / ніч"' },
+      { text: 'Так' }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Режим зйомки "День / ніч"' },
+      { text: 'Так' }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="item-info">
+      <div class="item-info__block grid grid--align-items-center">
+        <div class="col col--5">
+          <div class="section-img">
+            <img
+              class="js-lazy"
+              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              alt=""
+              data-src="./img/3.jpg"
+            />
+          </div>
+        </div>
+
+        <div class="col col--7">
+          <h1 class="item-info__title">РЕМОНТ TOPCON AGI 3, ПЕРЕПРОШИВКА І НАЛАШТУВАННЯ</h1>
+
+          <table class="item-info__table">
+            <caption>Технічні характеристики:</caption>
+
+            {% for i in table %}
+            <tr>
+              {% for j in i.cols %}
+              <td>{{ j.text | safe }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+      
+      <article class="article">
+        <h4 class="item-info__title-sm title title--h4">Основні характеристики:</h4>
+
+        <ul class="list">
+          <li>Герметичний металевий корпус залитий силіконом</li>
+          <li>Захист від навколишнього середовища Ip68 (витримує 1 метр глибини води)</li>
+          <li>160 градусів огляду</li>
+        </ul>
+
+        <p>Дане обладнання призначене для контролю стеження механізатором об'єктів знаходяться в зоні недосяжною видимості (Дане обладнання призначене для контролю стеження механізатором об'єктів знаходяться в зоні недосяжною видимості (мертва зона) або контроль операції при роботі техніки. Обладнання є комбайни, самохідні обприскувачі, трактори, хури, екскаватори. мертва зона) або контроль операції при роботі техніки. На сьогоднішній день альтернативою використання такого обладнання є комбайни, самохідні обприскувачі, трактори, хури, екскаватори. </p>
+      </article>
+
+      {% include "partials/_section-btns.html" %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -1,5 +1,92 @@
 <!-- begin footer -->
 <footer class="out__footer footer">
-  hello from footer
+  <div class="container">
+    <div class="footer__inner">
+      <div class="grid">
+        <div class="col col--3">
+          <a href="/" class="footer__logo logo">
+            <img
+              class="js-lazy"
+              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              alt=""
+              data-src="./img/logo.svg"
+            />
+          </a>
+
+          <p class="footer__text">
+            TOB «ФРЕНДТ» спеціалізується на системах 
+            точного землеробства  та більше 6 років є 
+            одним з найбільших операторів по 
+            впровадженню інновацій в даній сфері
+          </p>
+        </div>
+
+        <div class="col--3">
+          <h3 class="footer__title title title--h3 title--reg">Послуги</h3>
+
+          {{ mixins.list(
+            name = 'nav',
+            hasWrap = true,
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Перед основним грунтообробітком' },
+              { link: 'Основний грунтообробіток' },
+              { link: 'Посів' },
+              { link: 'Внесення ЗЗР' },
+              { link: 'Збір урожаю' },
+              { link: 'Аналітика' }
+            ]
+          ) }}
+        </div>
+
+        <div class="col--2">
+          <h3 class="footer__title title title--h3 title--reg">Клієнтам</h3>
+
+          {{ mixins.list(
+            name = 'nav',
+            hasWrap = true,
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Про компанію' },
+              { link: 'Продукти' },
+              { link: 'Точне землеробство' },
+              { link: 'Сервіс' },
+              { link: 'Новини' },
+              { link: 'Сезонні знижки' }
+            ]
+          ) }}
+        </div>
+
+        <div class="col--2">
+          <h3 class="footer__title title title--h3 title--reg">Контакти</h3>
+
+          {{ mixins.list(
+            name = 'descr-list',
+            descr = true,
+            modifications = { dt: 'descr-list__title', dd: 'descr-list__text' },
+            list = [
+              { dt: 'Вінниця', dd: '<a href="tel:+380674355014">+380674355014</a>' },
+              { dt: 'Київ', dd: '<a href="tel:+380670102102">+380670102102</a>' },
+              { dt: 'E-mail', dd: '<a href="mailto:adv@frendt.com.ua">adv@frendt.com.ua</a>' }
+            ]
+          ) }}
+        </div>
+
+        <div class="col--2">
+          <h3 class="footer__title title title--h3 title--reg">Адреса</h3>
+
+          {{ mixins.list(
+            name = 'descr-list',
+            descr = true,
+            modifications = { dt: 'descr-list__title', dd: 'descr-list__text' },
+            list = [
+              { dt: 'Сервісний центр у Вінниці', dd: 'Пр. Юності, 10а' },
+              { dt: 'Представництво у Києві:', dd: 'Пр. Перемоги, 123, оф. 304' }
+            ]
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

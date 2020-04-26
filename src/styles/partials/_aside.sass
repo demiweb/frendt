@@ -1,0 +1,69 @@
+.aside
+  &__block
+    +notlast
+      margin-bottom: rem(30)
+
+.aside-block
+  border-radius: $radius-sm
+  overflow: hidden
+  border: 1px solid  $light
+
+  &__header
+    background-color: $accent
+    color: $white
+    text-align: center
+
+    padding: rem(12)
+
+    font-weight: 700
+    text-transform: uppercase
+
+  &__map
+    padding-top: 60%
+
+  &--no-border
+    border: 0
+
+
+.aside-categories
+  &__title,
+  &__subitem
+    padding: rem(12) rem(20)
+    +tr(color .3s)
+    +hover-focus
+      color: $accent
+
+  &__title
+    width: 100%
+
+    text-align: left
+    text-transform: uppercase    
+    background-color: $lighten
+
+    margin-bottom: 1px
+    position: relative
+
+    +before
+      +icon-arrow(.6, .6, .1, currentColor, -45)
+      display: block
+      position: absolute
+      z-index: 1
+      top: 50%
+      right: rem(20)
+      transform: translate(0, -50%) rotate(-45deg)
+
+    &--active
+      +before
+        transform: translate(0, -50%) rotate(135deg)
+        color: $accent
+
+  &__subitem    
+    border-bottom: 1px solid $light
+
+  &__sublist
+    max-height: 0
+    overflow: hidden
+
+    &--open
+      max-height: none
+

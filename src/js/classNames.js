@@ -1,10 +1,17 @@
 export default {
   lazy: 'js-lazy',
   animNav: 'js-animated-nav',
+  select: 'js-select',
+  popup: 'js-popup',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',
     close: 'js-menu-close',
+  },
+  accordion: {
+    wrap: 'js-accordion',
+    btn: 'js-accordion-btn',
+    item: 'js-accordion-item',
   },
   slider: {
     container: 'js-slider',

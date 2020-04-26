@@ -1,0 +1,24 @@
+---
+title: products-page
+page: products-page
+language: uk
+hero: {
+  bg: '1236.jpg',
+  title: ' RTK-мережа',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'Продукти' },
+      { item: '-' },
+      { item: 'RTK-мережа', modItem: 'breadcrumbs__current-item' }
+    ]
+  }
+}
+---
+{% extends "layouts/_default.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-products-page.html" %}
+{% endblock %}

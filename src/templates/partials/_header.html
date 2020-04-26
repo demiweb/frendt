@@ -44,4 +44,70 @@
   </div>
 </header>
 <!-- end header -->
+
+{% else %}
+
+<!-- begin header -->
+<div class="out__header header{% if header.mod %} {{ header.mod }}{% endif %}">
+  <div class="container">
+    <div class="header__inner">
+      <a href="/" class="header__logo logo">
+        <img
+          class="js-lazy"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt=""
+          data-src="./img/logo.svg"
+        />
+      </a>
+
+      {{ mixins.list(
+        name = 'nav',
+        hasWrap = true,
+        modifications = { wrap: 'header__nav js-menu', item: '', link: '' },
+        list = [
+          { link: 'Головна', modItem: 'nav__current-item' },
+          { link: 'Про компанію' },
+          { link: 'Продукти' },
+          { link: 'Точне землеробство' },
+          { link: 'Сервіс' },
+          { link: 'Новини' },
+          { link: 'Контакти' },
+          { link: 'Сезонні знижки' }
+        ]
+      ) }}
+
+      <button
+        type="button"
+        aria-label="Toggle menu"
+        class="header__burger burger js-burger"
+      ><span></span></button>
+
+      {% include "partials/main/_menu.html" %}
+
+      <div class="lang header__lang">
+        <div class="lang__item lang__item--current">
+          <img
+            class="js-lazy"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt=""
+            data-src="./img/Flag_of_Ukraine.svg"
+          />
+        </div>
+
+        <ul class="lang__panel">
+          <li class="lang__item"><a href="#" class="lang__link">
+            <img
+              class="js-lazy"
+              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              alt=""
+              data-src="./img/Flag_of_Russia.svg"
+            />
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header -->
+
 {% endif %}

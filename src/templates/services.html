@@ -1,0 +1,51 @@
+---
+title: services
+page: services
+language: uk
+breadcrumbs: {
+  list: [
+    { link: 'Головна' },
+    { item: '-' },
+    { item: 'Сервіс', modItem: 'breadcrumbs__current-item' }
+  ]
+}
+sServices: {  
+  title: Сервіс,
+  hr: true,
+  services: {
+    links: true,
+    list: [
+      {
+        icon: true,
+        mod: 'service-item--accent',
+        text: 'ремонт агроелектроніки',
+        img: 'services/1.png'
+      },
+      {
+        icon: true,
+        text: 'польовий сервіс',
+        img: 'services/frendt_logo.png'
+      },
+      {
+        icon: true,
+        mod: '',
+        text: 'заправка та обслуговування 
+    кліматичних систем',
+        img: 'services/8.png'
+      },
+      {
+        icon: true,
+        mod: 'service-item--accent',
+        text: 'кабелі, джгути, коннектори',
+        img: 'services/10.png'
+      }
+    ]
+  }
+}
+---
+{% extends "layouts/_default.html" %}
+
+{% block content %}
+  {% set services = sServices.services %}
+  {% include "partials/sections/_s-services.html" %}
+{% endblock %}

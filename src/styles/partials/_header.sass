@@ -1,6 +1,12 @@
 .header
   $this: &
 
+  background-color: $white
+  border-bottom: 1px solid  $light
+
+  > .container
+    height: 100%
+
   &__inner
     display: flex
     align-items: center
@@ -21,14 +27,25 @@
     &--open
       +visible
 
+  &__nav
+    flex-grow: 1    
+
   &__logo
     +lg
       width: rem(120)
 
+  &__burger
+    margin-left: auto
+    margin-right: rem(25)
+    +lgmin
+      display: none
+
   &--wide
+    background-color: transparent
+    border-bottom: 0
     +lg
       background-color: $white
-      box-shadow: 0 0 10px rgba($black, .15)
+      border-bottom: 1px solid $light
     #{$this}__inner
       padding-left: rem(60)
       padding-right: rem(25)
@@ -37,9 +54,10 @@
         padding-left: rem(15)
         padding-right: rem(15)
 
-    #{$this}__burger
-      margin-left: auto
-      margin-right: rem(25)
+    #{$this}__burger     
+
+      +lgmin
+        display: flex
 
 .lang
   $this: &

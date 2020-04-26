@@ -1,0 +1,27 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title title--h2 text--center">Також рекомендуємо</h2>
+
+    <ul class="grid">
+      {% for i in range(0, 3) %}
+      <li class="col col--4">
+        <a href="#" class="img-link js-lazy" data-background-image="./img/8.jpg">
+          <span class="img-link__content">
+            <span class="img-link__content-left">
+              <span class="img-link__text">
+                Автоматичне відключення  
+            секцій сівалок 
+            та оприскувачів
+              </span>
+            </span>
+
+            <i class="img-link__icon right-arr-circle"></i>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- end section -->

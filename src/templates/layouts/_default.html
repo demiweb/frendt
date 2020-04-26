@@ -16,6 +16,16 @@
       {% include "partials/_header.html" %}
       <!-- begin main -->
       <main class="out__main main{% if mainClass %} {{ mainClass }}{% endif %}">
+        {% if breadcrumbs %}
+        <div class="container">
+          {{ mixins.list(
+            name = 'breadcrumbs',
+            modifications = { wrap: '', list: 'main__breadcrumbs', item: '', link: '' },
+            list = breadcrumbs.list
+          ) }}
+        </div>
+        {% endif %}
+        
         {% block content %}{% endblock %}
       </main>
       <!-- end main -->
@@ -23,6 +33,8 @@
       {% if not footer.hidden %}
         {% include "partials/_footer.html" %}
       {% endif %}
+
+      {% include "partials/popups/_popups.html" %}
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

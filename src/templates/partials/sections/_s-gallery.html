@@ -1,0 +1,27 @@
+<!-- begin section -->
+<section class="s-gallery">
+  <div class="container">
+    <div class="slider__wrap slider--gallery__wrap js-slider-wrap">
+      <div class="swiper-container js-slider" data-slider="gallery">
+        <div class="swiper-wrapper slider slider--gallery">
+          {% for i in range(0, 5) %}
+          <div
+            class="swiper-slide gallery-item js-lazy"
+            data-background-image="./img/dude.jpg"
+          ></div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button
+          class="slider__prev control control--prev js-slider-prev"
+        >попередня</button>
+        <button
+          class="slider__next control control--next js-slider-next"
+        >наступна</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -12,7 +12,7 @@ export default class Slider {
   }
 
   _getOptions() {
-    this.getOptions = ({ navigation, onInit, pagination }) => ({
+    this.getOptions = ({ nextButton, prevButton, onInit, pagination }) => ({
       main: {
         pagination,
         paginationClickable: true,
@@ -24,6 +24,14 @@ export default class Slider {
         slidesPerView: 'auto',
         centeredSlides: true,
         init: false,
+      },
+      gallery: {
+        nextButton,
+        prevButton,
+        slidesPerView: 1,
+        on: {
+          init: onInit,
+        },
       },
     })
   }

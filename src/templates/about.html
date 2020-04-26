@@ -1,0 +1,70 @@
+---
+title: about
+page: about
+language: uk
+breadcrumbs: {
+  list: [
+    { link: 'Головна ' },
+    { item: '-' },
+    { item: 'Про компанію', modItem: 'breadcrumbs__current-item' }
+  ]
+}
+sServices: {
+  title: Напрямки діяльності,
+  services: {
+    list: [
+      {
+        mod: 'service-item--accent',
+        text: 'дообладнання тракторів 
+    системами автоматичного 
+    водіння
+    ',
+        img: 'services/27.png'
+      },
+      {
+        text: 'ремонт агроелектроніки 
+    (для всіх с/г машин)',
+        img: 'services/engines-large.png'
+      },
+      {
+        text: 'навчання персоналу 
+    в напрямі GNSS-систем',
+        img: 'services/Trimble_R12_Studio_3043_CC.png'
+      },
+      {
+        mod: 'service-item--accent',
+        text: 'продаж та встановлення 
+    систем паралельного
+    водіння Hexagon',
+        img: 'services/24.png'
+      },
+      {
+        mod: 'service-item--accent',
+        text: 'Встановлення систем автоматичного 
+    управління норм виливу,відключення 
+    секцій, моніторинг висіву',
+        img: 'services/TMX-2050-trimble-ag-inset-2.png'
+      },
+      {
+        text: 'Вивчення ґрунту 
+    та створення карт',
+        img: 'services/FarmSprayPro_AddSprayJob_Overview_TNFarm_BigField.png'
+      }
+    ]
+  }
+}
+---
+{% extends "layouts/_default.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-about-info.html" %}
+  {% include "partials/sections/_s-features.html" %}
+
+  {% set services = sServices.services %}  
+  {% include "partials/sections/_s-services.html" %}
+  
+  {% include "partials/sections/_s-about-map.html" %}
+  {% include "partials/sections/_s-clients.html" %}
+  {% include "partials/sections/_s-about-help.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
+{% endblock %}

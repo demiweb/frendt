@@ -1,0 +1,46 @@
+{%set
+form = {
+  mod: 'popup__form',
+  title: 'Замовити консультацію',
+  subttl: '
+    <p>Спеціалісти з "ФРЕНДТ" завжди раді вашому повідомленню.</p>
+    <p>Не зволікайте, та зв’яжіться з нами за допомогою форми нижче!</p>
+  ',
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'Ім’я',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+      label: { first: '' }
+    },
+    {
+      name: 'input',
+      type: 'email',
+      placeholder: 'E-mail',
+      label: { first: '' }
+    },
+    {
+      name: 'textarea',
+      type: '',
+      placeholder: 'Коротко опишіть ваше питання та вкажіть назву компанії',
+      label: { first: '<label class="input__label">Коментар</label>' }
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="consult">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+    
+    {% include "partials/_form.html" %}
+  </div>
+</div>
+<!-- end popup -->

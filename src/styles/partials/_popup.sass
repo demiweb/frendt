@@ -1,0 +1,39 @@
+.popup
+  position: fixed
+  z-index: 15
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+  overflow: auto
+  padding: rem(15)
+  background-color: rgba($black, .9)
+
+  +vertical
+  +ready
+    +tr(opacity .3s, visibility .3s)
+  +hidden
+
+  &__inner
+    display: inline-block
+    vertical-align: middle
+    font-size: 1rem
+    
+    width: 100%
+    max-width: rem(690)
+    
+    background-color: $white
+    border-radius: $radius-sm
+    position: relative
+
+    padding: rem(75) rem(15)
+
+  &__form
+    max-width: rem(450)
+    margin-left: auto
+    margin-right: auto
+
+  &--active
+    +visible
+    

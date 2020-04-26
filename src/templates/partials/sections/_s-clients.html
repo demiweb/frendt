@@ -1,0 +1,42 @@
+{%set
+clients = [
+  { img: '_MG_8819.png' },
+  { img: 'screen (1).png' },
+  { img: 'screen (1)-1.png' },
+  { img: 'screen (2).png' },
+  { img: 'screen (3).png' },
+  { img: 'screen (3)-1.png' },
+  { img: 'screen (4).png' },
+  { img: 'screen (4)-1.png' },
+  { img: 'screen (5).png' },
+  { img: 'screen (6).png' },
+  { img: 'screen (7).png' },
+  { img: 'screen (8).png' },
+  { img: 'screen.png' },
+  { img: 'screen-1.png' },
+  { img: 'Слой 25.png' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h1 class="section__title title title--h1">Наші клієнти</h1>
+
+    <ul class="grid">
+      {% for i in clients %}
+      <li class="col col--3">
+        <div class="client-logo">
+          <img
+            class="js-lazy"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt=""
+            data-src="./img/clients/{{ i.img }}"
+          />
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,49 @@
+.pagination
+  $this: &
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  a
+    &:not(.prev):not(.next)
+      display: flex
+      align-items: center
+      justify-content: center
+
+      border-radius: rem(35)
+      border: 1px solid  currentColor
+
+      height: rem(35)
+      min-width: rem(35)
+
+      +tr(color .3s)
+
+      +hover-focus
+        @extend #{$this}__current-item
+        border-color: $accent
+        background-color: $accent
+
+  li
+    margin-left: rem(5)
+    margin-right: rem(5)
+
+  .prev,
+  .next
+    position: relative
+    top: .2em
+    +tr(color .3s, background-color .3s, border-color .3s)
+
+    +hover-focus
+      color: $accent
+
+  .prev
+    display: inline-block
+    transform: scaleX(-1)
+
+  &__current-item
+    color: $white
+    a
+      &:not(.prev):not(.next)
+        border-color: $accent
+        background-color: $accent

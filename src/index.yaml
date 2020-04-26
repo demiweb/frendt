@@ -2,3 +2,17 @@ ProjectTitle: frendt
 
 PageList:
 - file: main.html
+- file: about.html
+- file: one-item.html
+- file: agr-one-item.html
+- file: agriculture.html
+- file: blog.html
+- file: blog-page.html
+- file: contacts.html
+- file: products.html
+- file: products-page.html
+- file: discounts.html
+- file: services.html
+- file: one-service.html
+- file: 404.html
+- file: thanks.html

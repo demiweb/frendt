@@ -1,0 +1,15 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title title--h2 text--center">Не пропустіть також</h2>
+
+    <ul class="grid">
+      {% for i in range(0, 3) %}
+      <li class="col col--4">
+        {% include "partials/_img-link.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- end section -->

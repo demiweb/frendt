@@ -1,0 +1,47 @@
+.control
+  text-transform: uppercase
+  border-bottom: 1px solid currentColor
+
+  +tr(color .3s)
+
+  +hover-focus
+    color: $accent
+
+  &--prev
+    padding-right: 1.2em
+
+  &--next
+    padding-left: 1.2em
+
+
+.slider
+  &__wrap
+    position: relative
+    *
+      box-sizing: border-box
+
+  &__prev,
+  &__next
+    &.swiper-button-disabled
+      opacity: .5
+      pointer-events: none
+
+  &--gallery
+    &__wrap
+      .swiper-container
+        max-width: percentage(1065 / 1440)
+        margin-left: auto
+        margin-right: auto
+
+      .slider
+        &__controls
+          display: flex
+          align-items: center
+          justify-content: space-between
+
+          position: absolute
+          z-index: 2
+          left: 0
+          right: 0
+          top: 50%
+          transform: translate(0, -50%)

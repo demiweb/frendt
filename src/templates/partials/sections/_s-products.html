@@ -1,0 +1,46 @@
+{%set
+products = [
+  { mod: 'products__item--high', img: '', title: 'Відеоспостереження' },
+  { mod: 'products__item--wide', img: '', title: 'Trade-in' },
+  { mod: 'products__item--wide', img: '', title: 'FlyAgData' },
+  { mod: '', img: '', title: 'LED-освітлення' },
+  { mod: '', img: '', title: 'Amity' },
+  { mod: '', img: '', title: 'Reichhardt' },
+  { mod: 'products__item--wide', img: '', title: 'RTK-мережа' },
+  { mod: 'products__item--high', img: '', title: 'Farm QA' },
+  { mod: 'products__item--wide', img: '', title: 'hexagon' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h1 class="section__title section__title--mb-lg title title--h1">Продукти</h1>
+
+    <!-- begin products -->
+    <div class="products{% if i.mod %} {{ i.mod }}{% endif %}">
+      {% for i in products %}
+      <a
+        href="#"
+        class="products__item product-link{% if i.mod  %} {{ i.mod }}{% endif %} js-lazy"
+        data-background-image="./img/products/3769.jpg"
+      >
+        <span class="product-link__title title title--h2-sm title--ttu">{{ i.title | safe }}</span>
+
+        <span class="product-link__btn">
+          {{ mixins.btn(
+            title = 'Переглянути',
+            mod = 'btn--white btn--arr btn--no-hover',
+            href = false,
+            isInline = true
+          ) }}
+        </span>
+
+        <i class="product-link__icon right-arr-circle"></i>
+      </a>
+      {% endfor %}
+    </div>
+    <!-- end products -->
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,15 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title title--h2 text--center">Топ продажів</h2>
+
+    <ul class="grid">
+      {% for i in range(0, 4) %}
+      <li class="col col--3">
+        {% include "partials/_card.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- end section -->

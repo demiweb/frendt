@@ -1,14 +1,17 @@
 // import regeneratorRuntime from 'regenerator-runtime'
 
+import Popup from 'popup-simple'
 import loadPolyfills from './polyfills/loadPolyfills'
 import classNames from './classNames'
 import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
 import animateNav from './methods/animateNav'
 import closeMenu from './methods/closeMenu'
+import setSelects from './methods/setSelects'
 
 import Menu from './components/Menu/Menu'
 import Slider from './components/Slider/Slider'
+import Accordion from './components/Accordion/Accordion'
 
 import { NO_SCROLL } from './constants'
 import { isModernBrowser, setVhProperty } from './helpers'
@@ -32,6 +35,13 @@ class App {
     })
 
     this.slider = new Slider(`.${classNames.slider.container}`)
+    this.accordion = new Accordion({
+      classNames: {
+        btn: 'aside-categories__title',
+        item: 'aside-categories__sublist',
+      },
+    })
+    this.popup = new Popup(`.${classNames.popup}`)
   }
 
   updateState(state) {
@@ -48,6 +58,7 @@ class App {
       setVhProperty,
       animateNav,
       closeMenu,
+      setSelects,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -58,6 +69,8 @@ class App {
 
     this.menu.init()
     this.slider.init()
+    this.accordion.init()
+    this.popup.init()
   }
 
   preventScroll() {

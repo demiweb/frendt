@@ -1,4 +1,7 @@
 .out
+  display: flex
+  flex-direction: column
+  +windowHeight()
   padding-top: $header-height
 
   +lg
@@ -17,6 +20,7 @@
       height: $header-height-lg
 
   &__main
+    flex-grow: 1
     
   &__footer
 

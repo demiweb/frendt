@@ -1,0 +1,72 @@
+.card
+  display: flex
+  flex-direction: column
+  text-align: center
+
+  height: 100%
+
+  border-radius: $radius
+  border: 1px solid  $light
+  overflow: hidden
+
+  &__img
+    text-align: center
+    position: relative
+    padding-top: 60%
+
+    border-bottom: 1px solid $light
+    img
+      position: absolute
+      top: 0
+      left: 0
+
+      width: 100%
+      height: 100%
+
+      object-fit: cover
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    padding: rem(25) rem(15)
+
+  &__text-wrap
+    flex-grow: 1
+
+  &__index
+    margin-bottom: rem(10)
+
+  &__text
+    margin-bottom: rem(15)
+
+  &__price
+    margin-bottom: rem(15)
+
+.plan-card
+  position: relative
+  border-radius: $radius
+  background-color: #fbfbfb
+
+  margin-top: rem(135)
+
+  padding: 0 rem(30) rem(30)
+
+  &__img
+    position: relative
+    z-index: 1
+
+    margin-top: rem(-130)
+    margin-bottom: rem(15)
+
+    margin-left: auto
+    margin-right: auto
+
+  &__title
+    margin-bottom: rem(15)
+
+  &__list
+    .main-nav__link
+      text-align: left
+

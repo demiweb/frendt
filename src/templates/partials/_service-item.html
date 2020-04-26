@@ -1,0 +1,41 @@
+{% if services.links %}
+<!-- begin service-item -->
+<a href="#" class="service-item{% if i.mod %} {{ i.mod }}{% endif %}">
+  <span class="service-item__content">
+    <span class="service-item__text">{{ i.text | safe }}</span>
+
+    {% if i.icon %}
+    <i class="service-item__icon right-arr-circle"></i>
+    {% endif %}
+  </span>
+
+  <img
+    class="service-item__img js-lazy"
+    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    alt=""
+    data-src="./img/{{ i.img }}"
+  />
+</a>
+<!-- end service-item -->
+{% else %}
+<!-- begin service-item -->
+<div class="service-item{% if i.mod %} {{ i.mod }}{% endif %}">
+  <div class="service-item__content">
+    <p class="service-item__text">{{ i.text | safe }}</p>
+
+    {% if i.icon %}
+    <i class="service-item__icon right-arr-circle"></i>
+    {% endif %}
+  </div>
+
+  <img
+    class="service-item__img js-lazy"
+    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    alt=""
+    data-src="./img/{{ i.img }}"
+  />
+</div>
+<!-- end service-item -->
+{% endif %}
+
+
