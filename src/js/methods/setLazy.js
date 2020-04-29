@@ -1,3 +1,4 @@
+import lozad from 'lozad'
 import classNames from '../classNames'
 import { IS_LOADED } from '../constants'
 
@@ -12,17 +13,15 @@ export default function setLazy() {
     img.classList.add('lazy')
   })
 
-  import(/* webpackChunkName: "lozad" */ 'lozad').then(({ default: lozad }) => {
-    const observer = lozad(`.${JS_LAZY}`, {
-      loaded: el => {
-        if (el.hasAttribute('data-src')) {
-          el.removeAttribute('data-src')
-        } else if (el.hasAttribute('data-background-image')) {
-          el.removeAttribute('data-background-image')
-        }
-        el.classList.add(`lazy--${IS_LOADED}`)
-      },
-    })
-    observer.observe()
+  const observer = lozad(`.${JS_LAZY}`, {
+    loaded: el => {
+      if (el.hasAttribute('data-src')) {
+        el.removeAttribute('data-src')
+      } else if (el.hasAttribute('data-background-image')) {
+        el.removeAttribute('data-background-image')
+      }
+      el.classList.add(`lazy--${IS_LOADED}`)
+    },
   })
+  observer.observe()
 }
