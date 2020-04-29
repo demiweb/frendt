@@ -1,7 +1,20 @@
 .aside
+  background-color: $white
+  border-radius: $radius-sm
   &__block
     +notlast
       margin-bottom: rem(30)
+
+  &__close
+    color: $white
+    top: rem(20)
+    right: rem(20)
+
+    +mdmin
+      display: none
+
+    +hover-focus
+      color: $c-text
 
 .aside-block
   border-radius: $radius-sm
@@ -24,24 +37,35 @@
   &--no-border
     border: 0
 
-
 .aside-categories
   &__title,
   &__subitem
     padding: rem(12) rem(20)
     +tr(color .3s)
+
+    +lg
+      padding: rem(10) rem(15)
+
     +hover-focus
       color: $accent
 
+  &__item
+    +notlast
+      margin-bottom: 1px
+
   &__title
     width: 100%
+    padding-right: rem(35)
 
     text-align: left
     text-transform: uppercase    
-    background-color: $lighten
-
-    margin-bottom: 1px
+    background-color: $lighten    
     position: relative
+
+    +text-overflow
+
+    +lg
+      padding-right: rem(30)
 
     +before
       +icon-arrow(.6, .6, .1, currentColor, -45)
@@ -57,8 +81,9 @@
         transform: translate(0, -50%) rotate(135deg)
         color: $accent
 
-  &__subitem    
-    border-bottom: 1px solid $light
+  &__subitem
+    +notlast
+      border-bottom: 1px solid $light
 
   &__sublist
     max-height: 0

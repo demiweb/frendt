@@ -1,4 +1,3 @@
-import Swiper from 'swiper'
 import setLazy from '../../methods/setLazy'
 import classes from '../../classNames'
 
@@ -44,22 +43,26 @@ export default class MySlider {
   }
 
   _initPlugin() {
-    this.swiper = new Swiper(this.container, this.options)
+    const init = Swiper => {
+      this.swiper = new Swiper(this.container, this.options)
 
-    if (this.name === 'main') {
-      this.swiper.on('init', () => {
-        setLazy()
-        // setTimeout(this.playVideo.bind(this), 200)
-      })
+      if (this.name === 'main') {
+        this.swiper.on('init', () => {
+          setLazy()
+          // setTimeout(this.playVideo.bind(this), 200)
+        })
 
-      // this.swiper.on('transitionEnd', () => {
-      //   this.playVideo()
-      // })
+        // this.swiper.on('transitionEnd', () => {
+        //   this.playVideo()
+        // })
 
-      this.swiper.init()
+        this.swiper.init()
+      }
+
+      this.inited = true
     }
 
-    this.inited = true
+    import(/* webpackChunkName: "swiper" */ 'swiper').then(({ default: Swiper }) => init(Swiper))
   }
 
   // playVideo() {

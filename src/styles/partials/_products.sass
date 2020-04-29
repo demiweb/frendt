@@ -4,13 +4,22 @@
   grid-gap: $gap
   grid-template-columns: repeat(3, 1fr)
 
+  +xs
+    display: block
+
   &__item
     min-height: vw(300)
+
+    +xs
+      min-height: vw(500)
+      +notlast
+        margin-bottom: $grid-gap
+        margin-bottom: $gap
+
     &--high
       grid-row-end: span 2
     &--wide
       grid-column-end: span 2
-
 
 .product-link
   $this: &
@@ -31,6 +40,9 @@
   +cover
   background-color: $light
 
+  +lg
+    padding: rme(15)
+
   +before
     +coverdiv
     z-index: 0
@@ -49,12 +61,24 @@
       max-height: rem(50)
 
   &__title
-    display: block
+    @extend .title
+    @extend .title--h2-sm
+    @extend .title--ttu
 
     position: relative
     z-index: 1
 
     margin-bottom: rem(10)
+    margin-top: rem(10)
+
+    +lg
+      font-size: em(24)
+
+    +md
+      font-size: em(18)
+
+    +sm
+      font-size: em(16)
 
   &__btn
     display: block  
@@ -75,6 +99,11 @@
 
     font-size: rem(30)
 
+    +lg
+      font-size: rem(25)
+      bottom: rem(15)
+      right: rem(15)
+
 .products-list
   $this: &
 
@@ -82,10 +111,11 @@
 
   &__item
     @extend .col
-    @extend .col--4
+    @extend .col--sm-4
+    @extend .col--xxs-6
     position: relative
 
-  &--column
+  &--row
     display: block
 
     #{$this}__item
@@ -106,6 +136,15 @@
 
       +tr(box-shadow .3s)
 
+      +lg
+        padding: rem(30) 0
+
+      +md
+        padding: rem(15) 0
+
+      +sm
+        padding: 0
+
       &:first-child
         border-top: 1px solid  $light
 
@@ -121,6 +160,12 @@
       &__img
         width: percentage(330 / 1050)
         padding-top: 0
+        +xxs
+          img
+            transform: translate(0, 0)
+            top: rem(15)
+            left: rem(15)
+
       &__content
         width: percentage((1050 - 330) / 1050)
         padding-left: rem(30)
@@ -219,7 +264,10 @@
       max-width: 80%
 
   &__content
-    padding: rem(25) rem(25)
+    padding: rem(25)
+
+    +lg
+      padding: rem(15)
 
   &__title
     border-bottom: 1px solid $light
@@ -249,11 +297,29 @@
     width: 55%
     float: left
 
+    +xl
+      float: none
+      width: auto
+
+  &__price
+    display: block
+    +xl
+      margin-bottom: rem(15)
+
   &__btn
     width: 50%
+    max-width: rem(170)
     float: right
     position: relative
     margin-top: rem(-45)
+
+    +xl
+      margin-top: 0
+      float: none
+      width: auto
+
+    +xs
+      max-width: none
 
   &__index
     display: block
@@ -261,4 +327,6 @@
 
   &__text,
   &__btn
-    display: none
+    +xxsmin
+      display: none
+      

@@ -18,6 +18,10 @@
 
   +tr(background-color .3s, color .3s)
 
+  +xs
+    min-width: 0
+    width: 100%
+
   +hover-focus
     &:not(#{$this}--no-hover)
       background-color: transparent
@@ -43,11 +47,35 @@
     border-color: $white
     color: $accent
 
+  &--full
+    min-width: 0
+    width: 100%
+
   &--arr
     +after
       +icon-arrow(.5, .5, .1, currentColor, 225)
       display: block
       margin-left: 1em
+
+  &--arr-lg
+    @extend #{$this}--arr
+    font-size: em(30)
+
+    width: rem(50)
+    height: rem(50)
+
+    min-width: 0
+    padding: 0
+    border-radius: 50%
+
+    +xs
+      width: rem(40)
+      height: rem(40)
+      font-size: em(25)
+      margin-right: rem(5)
+
+    &::after
+      margin-left: -.2em
 
   &--400
     @extend .fw--400

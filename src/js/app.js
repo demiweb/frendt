@@ -8,6 +8,8 @@ import setLazy from './methods/setLazy'
 import animateNav from './methods/animateNav'
 import closeMenu from './methods/closeMenu'
 import setSelects from './methods/setSelects'
+import setGallery from './methods/setGallery'
+import toggleProductView from './methods/toggleProductsView'
 
 import Menu from './components/Menu/Menu'
 import Slider from './components/Slider/Slider'
@@ -41,7 +43,7 @@ class App {
         item: 'aside-categories__sublist',
       },
     })
-    this.popup = new Popup(`.${classNames.popup}`)
+    this.popup = new Popup()
   }
 
   updateState(state) {
@@ -59,6 +61,8 @@ class App {
       animateNav,
       closeMenu,
       setSelects,
+      setGallery,
+      toggleProductView,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

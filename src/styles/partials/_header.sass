@@ -14,7 +14,7 @@
 
   &__menu
     position: fixed
-    z-index: 10
+    z-index: 12
     top: 0
     left: 0
     right: 0
@@ -28,11 +28,39 @@
       +visible
 
   &__nav
-    flex-grow: 1    
-
-  &__logo
+    flex-grow: 1
     +lg
-      width: rem(120)
+      position: fixed
+      z-index: 10
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+
+      background-color: $white
+
+      padding: rem(15)
+      overflow: auto
+
+      +vertical
+      +ready
+        +tr(opacity .3s, visibility .3s)
+      +hidden
+
+      ul
+        display: inline-block
+        vertical-align: middle
+        width: 100%
+        font-size: 1rem
+
+      &--open
+        +visible
+
+  &__logo,
+  &__burger,
+  &__lang
+    z-index: 11
+    
 
   &__burger
     margin-left: auto
@@ -71,6 +99,11 @@
       transform: translate(0, 0)
       z-index: 1
 
+  &__link
+    display: inline-block
+    width: 100%
+    height: 100%
+
   &__item
     font-size: 0
     display: block
@@ -88,6 +121,9 @@
       width: 100%
       height: 100%
       object-fit: cover
+
+    &:not(:last-child):not(#{$this}__item--current)
+      margin-bottom: rem(12)
 
   &__panel
     position: absolute
@@ -136,10 +172,10 @@
     &::before
       bottom: 0
 
-  // &--active 
-  //   span
-  //     background-color: transparent
-  //     &::before
-  //       transform: rotate(45deg) translate(-7px,-5px)
-  //     &::after
-  //       transform: rotate(-45deg) translate(-6px,4px)
+  &--active 
+    span
+      background-color: transparent
+      &::before
+        transform: rotate(45deg) translate(-.35em, -.35em)
+      &::after
+        transform: rotate(-45deg) translate(-.45em, .4em)

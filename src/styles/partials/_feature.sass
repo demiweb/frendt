@@ -12,9 +12,25 @@
   border: 1px solid $light
   border-radius: $radius
 
+  +xl
+    padding: rem(40) rem(20)
+
+  +lg
+    padding: rem(20)
+
   &__text
     flex-grow: 1
 
   &__icon
-    font-size: rem(120)
+    // font-size: rem(120)
+    width: rem(120)
     margin-bottom: rem(25)
+    +md
+      width: rem(100)
+
+    +xs
+      width: rem(80)
+      margin-bottom: rem(15)
+
+    +xxs
+      width: rem(60)

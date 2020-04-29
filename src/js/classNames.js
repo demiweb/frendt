@@ -3,6 +3,11 @@ export default {
   animNav: 'js-animated-nav',
   select: 'js-select',
   popup: 'js-popup',
+  lightgallery: 'js-lightgallery',
+  products: {
+    btn: 'js-products-view-btn',
+    content: 'js-products-list',
+  },
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',

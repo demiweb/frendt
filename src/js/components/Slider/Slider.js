@@ -65,6 +65,7 @@ export default class Slider {
 
   handleMainSliderInit() {
     const [mainSlider] = this.sliders.filter(slider => slider.name === 'main')
+    if (!mainSlider) return
 
     if (window.matchMedia('(min-width: 1200px )').matches) {
       if (!mainSlider.inited) mainSlider.init()

@@ -1,14 +1,14 @@
 {%set
 products = [
-  { mod: 'products__item--high', img: '', title: 'Відеоспостереження' },
-  { mod: 'products__item--wide', img: '', title: 'Trade-in' },
-  { mod: 'products__item--wide', img: '', title: 'FlyAgData' },
-  { mod: '', img: '', title: 'LED-освітлення' },
-  { mod: '', img: '', title: 'Amity' },
-  { mod: '', img: '', title: 'Reichhardt' },
-  { mod: 'products__item--wide', img: '', title: 'RTK-мережа' },
-  { mod: 'products__item--high', img: '', title: 'Farm QA' },
-  { mod: 'products__item--wide', img: '', title: 'hexagon' }
+  { mod: 'products__item--high', img: '3769.jpg', title: 'Відеоспостереження' },
+  { mod: 'products__item--wide', img: 'dietmar-reichle-caiX9QloFc8-unsplash.jpg', title: 'Trade-in' },
+  { mod: 'products__item--wide', img: '10648.jpg', title: 'FlyAgData' },
+  { mod: '', img: '20.jpg', title: 'LED-освітлення' },
+  { mod: '', img: '19.jpg', title: 'Amity' },
+  { mod: '', img: '17.jpg', title: 'Reichhardt' },
+  { mod: 'products__item--wide', img: '203960_01_CLAAS_RTK_FIELD_BASE_1.jpg', title: 'RTK-мережа' },
+  { mod: 'products__item--high', img: '13.jpg', title: 'Farm QA' },
+  { mod: 'products__item--wide', img: '22.jpg', title: 'hexagon' }
 ]
 %}
 
@@ -23,9 +23,9 @@ products = [
       <a
         href="#"
         class="products__item product-link{% if i.mod  %} {{ i.mod }}{% endif %} js-lazy"
-        data-background-image="./img/products/3769.jpg"
+        data-background-image="./img/products/{{ i.img }}"
       >
-        <span class="product-link__title title title--h2-sm title--ttu">{{ i.title | safe }}</span>
+        <span class="product-link__title">{{ i.title | safe }}</span>
 
         <span class="product-link__btn">
           {{ mixins.btn(

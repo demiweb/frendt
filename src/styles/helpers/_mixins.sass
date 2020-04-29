@@ -1,10 +1,10 @@
 // width
-=r($width)
-  @media (max-width: $width+ "px")
+=r($width, $units: 'px')
+  @media (max-width: $width + $units)
     @content
 
-=rmin($width)
-  @media (min-width: $width+ "px")
+=rmin($width, $units: 'px')
+  @media (min-width: $width + $units)
     @content
 
 // height

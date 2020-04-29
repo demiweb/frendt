@@ -54,9 +54,15 @@ features = [
 
     <ul class="grid">
       {% for i in features %}
-      <li class="col col--3">
+      <li class="col col--md-3 col--6">
         <div class="feature">
-          {{ mixins.icon(i.icon, 'feature__icon') }}
+          {# {{ mixins.icon(i.icon, 'feature__icon') }} #}
+          <img
+            class="feature__icon js-lazy"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt=""
+            data-src="./img/{{ i.icon }}.svg"
+          />
 
           <p class="feature__text">{{ i.text | safe }}</p>
         </div>

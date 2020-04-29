@@ -14,18 +14,39 @@
     right: 0
     bottom: vw(100)
 
+    +sm
+      display: none
+
   &__caption
     position: relative
     z-index: 2     
 
   &__caption-inner
-    max-width: rem(855)
+    max-width: percentage(855 / 1440)
     background-color: $white
 
     padding-top: rem(70)
     padding-bottom: rem(70)
+    padding-right: rem(15)
 
     position: relative
+
+    +xl
+      padding-top: rem(50)
+      padding-bottom: rem(50)
+
+    +lg
+      padding-top: rem(40)
+      padding-bottom: rem(40)
+
+    +md
+      padding-top: rem(20)
+      padding-bottom: rem(20)
+
+    +sm
+      max-width: none
+      +before
+        display: none
 
     +before
       position: absolute
@@ -45,10 +66,16 @@
     position: absolute
     z-index: 1
     top: 0
-    width: percentagge(1320 / 1920)
-
-    object-fit: cover
+    width: percentage(1320 / 1920)
     height: 100%
+
+    object-fit: cover    
+
+    +sm
+      position: static
+      object-fit: contain
+      width: auto
+      height: auto
 
   &--left
     #{$this}__img
@@ -65,6 +92,15 @@
     #{$this}__caption-inner
       margin-left: auto
       padding-left: rem(70)
+
+      +xl
+        padding-left: rem(50)
+      +lg
+        padding-left: rem(40)
+      +md
+        padding-left: rem(20)
+      +sm
+        padding-left: 0
       
       +before
         left: 100%

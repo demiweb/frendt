@@ -1,4 +1,9 @@
 <div class="section__filters section-filters">
+  <button
+    class="section__aside-toggle btn btn--arr-lg js-burger"
+    data-menu-target="aside"
+  ></button>
+
   <div class="section-filters__select">
     {{ mixins.input(
       name = 'select',
@@ -20,11 +25,11 @@
   <div class="section-filters__controls">
     <button
       class="section-filters__control view-control js-products-view-btn"
-      data-view="row"
+      data-layout="row"
     >{{ mixins.icon('menu') }}</button>
     <button
       class="section-filters__control view-control view-control--active js-products-view-btn"
-      data-view="grid"
+      data-layout="grid"
     >{{ mixins.icon('grid') }}</button>
   </div>
 </div>
@@ -57,7 +62,7 @@
           <span class="product__btn">
             {{ mixins.btn(
               title = 'Детальніше',
-              mod = 'btn--transp-text btn--no-hover btn--sm btn--400',
+              mod = 'btn--transp-text btn--full btn--no-hover btn--sm btn--400',
               isInline = true,
               href = false
             ) }}

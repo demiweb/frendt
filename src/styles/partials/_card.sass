@@ -32,6 +32,9 @@
 
     padding: rem(25) rem(15)
 
+    +lg
+      padding: rem(15)
+
   &__text-wrap
     flex-grow: 1
 
@@ -51,14 +54,25 @@
 
   margin-top: rem(135)
 
-  padding: 0 rem(30) rem(30)
+  padding: rem(255) rem(30) rem(30) rem(30)
+
+  +xl
+    padding: rem(255) rem(20) rem(20) rem(20)
+
+  +lg
+    padding: rem(255) rem(15) rem(15) rem(15)
 
   &__img
-    position: relative
+    display: block
+
+    position: absolute
     z-index: 1
 
-    margin-top: rem(-130)
-    margin-bottom: rem(15)
+
+    top: rem(-130)
+    left: 50%
+    transform: translate(-50%, 0)
+    // margin-bottom: rem(-130 + 15)
 
     margin-left: auto
     margin-right: auto
@@ -69,4 +83,14 @@
   &__list
     .main-nav__link
       text-align: left
+
+.plan-list
+  &__item
+    &:nth-child(2)
+      .plan-card        
+        +md
+          padding-top: rem(275)
+          margin-top: rem(165)
+        &__img
+          top: rem(-160)
 

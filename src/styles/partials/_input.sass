@@ -2,15 +2,18 @@
   $this: &
 
   text-align: left
+  
   #{$text-inputs}
     width: 100%
-    border-bottom: 1px solid $light
-    padding: .3rem 0
     height: rem(35)
+
+    border-bottom: 1px solid $light
+    padding: .3rem 0    
+
     +placeholder
       color: inherit
-
     +tr(border-color .3s)
+
     &:focus
       border-color: $accent
 
@@ -36,7 +39,6 @@
     #{$this}__label
       margin-bottom: 0
       margin-right: rem(10)
-
 
 .custom-select
   $this: &

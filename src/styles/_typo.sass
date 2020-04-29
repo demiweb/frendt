@@ -7,11 +7,26 @@
     font-size: em(120)
     line-height: .9
 
+    +xl
+      font-size: em(100)
+    +lg
+      font-size: em(80)
+    +md
+      font-size: em(60)
+    +sm
+      font-size: em(45, $base-fz-sm)
+
   &--h2
     font-size: em(45)
+    +lg
+      font-size: em(36)
+    +sm
+      font-size: em(30, $base-fz-sm)
 
   &--h2-sm
     font-size: em(30)
+    +sm
+      font-size: em(26, $base-fz-sm)
 
   &--h3
     font-size: em(24)
@@ -99,6 +114,8 @@
   &--short
     p, ul, ol
       max-width: rem(500)
+      +md
+        max-width: none
 
 .list
   li
@@ -118,6 +135,9 @@ blockquote
   padding: rem(25)
 
   border-left: 4px solid  $accent
+
+  +lg
+    padding: rem(15)
 
 .link-arr
   display: inline-flex
