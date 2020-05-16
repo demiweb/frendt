@@ -6,9 +6,10 @@ export default () => {
   const nav = document.querySelector(`.${classNames.animNav}`)
   if (!nav) return
 
-  const TOGGLE_CLASSNAME_INTERVAL = 3000
-
   const links = [...nav.querySelectorAll('a')]
+  if (!links.length) return
+
+  const TOGGLE_CLASSNAME_INTERVAL = 3000
   let current = 0
   let next = 1
   setInterval(() => {

@@ -1,5 +1,5 @@
 // import regeneratorRuntime from 'regenerator-runtime'
-
+import './public-path'
 import Popup from 'popup-simple'
 import loadPolyfills from './polyfills/loadPolyfills'
 import classNames from './classNames'

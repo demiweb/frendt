@@ -4,17 +4,14 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { src, dest } from './gulp/config'
 
 function createConfig(env) {
-  if (env === undefined) {
-    env = process.env.NODE_ENV
-  }
-
+  if (!env) env = process.env.NODE_ENV
   const isProduction = env === 'production'
 
   const webpackConfig = {
     mode: isProduction ? 'production' : 'development',
     context: path.join(__dirname, src.js),
     entry: {
-      app: ['./app'],
+      app: './app',
       polyfills: './polyfills',
     },
     output: {
